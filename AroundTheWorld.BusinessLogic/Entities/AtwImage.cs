@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AroundTheWorld.BusinessLogic.Entities
 {
-    public class Image
+    public class AtwImage
     {
         public int Id { get; set; }
         public byte[] Content { get; set; }

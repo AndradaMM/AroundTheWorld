@@ -17,7 +17,7 @@ namespace AroundTheWorld.BusinessLogic.Entities
         public DateTime? ModifiedOn { get; set; }
 
         public Diary Diary { get; set; }
-        public Image Image { get; set; }
+        public AtwImage Image { get; set; }
 
     }
 }

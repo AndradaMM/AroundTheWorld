@@ -15,7 +15,7 @@ namespace AroundTheWorld.BusinessLogic.Entities
         public DateTime CreatedOn { get; set; }
         public DateTime? ModifiedOn { get; set; }
 
-        public Image Image { get; set; }
+        public AtwImage Image { get; set; }
         public ICollection<Chapter> Chapters { get; set; }
     }
 }
