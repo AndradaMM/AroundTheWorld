@@ -22,9 +22,7 @@ namespace AroundTheWorld.DataAccess.Migrations
             modelBuilder.Entity("AroundTheWorld.BusinessLogic.Entities.AtwImage", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<byte[]>("Content")
                         .HasColumnType("varbinary(max)");
@@ -43,9 +41,7 @@ namespace AroundTheWorld.DataAccess.Migrations
             modelBuilder.Entity("AroundTheWorld.BusinessLogic.Entities.Chapter", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
@@ -83,9 +79,7 @@ namespace AroundTheWorld.DataAccess.Migrations
             modelBuilder.Entity("AroundTheWorld.BusinessLogic.Entities.Diary", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");

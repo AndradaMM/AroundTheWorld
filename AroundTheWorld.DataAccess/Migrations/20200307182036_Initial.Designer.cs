@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AroundTheWorld.DataAccess.Migrations
 {
     [DbContext(typeof(AtwDbContext))]
-    [Migration("20200307114222_Initial")]
+    [Migration("20200307182036_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,9 +24,7 @@ namespace AroundTheWorld.DataAccess.Migrations
             modelBuilder.Entity("AroundTheWorld.BusinessLogic.Entities.AtwImage", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<byte[]>("Content")
                         .HasColumnType("varbinary(max)");
@@ -45,9 +43,7 @@ namespace AroundTheWorld.DataAccess.Migrations
             modelBuilder.Entity("AroundTheWorld.BusinessLogic.Entities.Chapter", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
@@ -85,9 +81,7 @@ namespace AroundTheWorld.DataAccess.Migrations
             modelBuilder.Entity("AroundTheWorld.BusinessLogic.Entities.Diary", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");

@@ -11,8 +11,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                 name: "tblAtwImage",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(nullable: false),
                     Content = table.Column<byte[]>(nullable: true),
                     CreatedOn = table.Column<DateTime>(nullable: false),
                     ModifiedOn = table.Column<DateTime>(nullable: true)
@@ -26,8 +25,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                 name: "tblDiary",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Location = table.Column<string>(nullable: true),
                     ImageId = table.Column<int>(nullable: true),
@@ -50,8 +48,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                 name: "tblChapter",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(nullable: false),
                     DiaryId = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Location = table.Column<string>(nullable: true),
