@@ -1,3 +1,4 @@
+using AroundTheWorld.BusinessLogic.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AroundTheWorld.Test
@@ -8,6 +9,8 @@ namespace AroundTheWorld.Test
         [TestMethod]
         public void TestMethod1()
         {
+            var diary = new Diary();
+           
         }
     }
 }

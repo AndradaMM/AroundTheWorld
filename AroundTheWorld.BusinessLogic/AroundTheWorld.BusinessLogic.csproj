@@ -8,8 +8,4 @@
     <ProjectReference Include="..\AroundTheWorld.Common\AroundTheWorld.Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
-
 </Project>
