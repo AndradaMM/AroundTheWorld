@@ -15,7 +15,7 @@ namespace AroundTheWorld.DataAccess
 
         public DbSet<Chapter> Chapters { get; set; }
         public DbSet<Diary> Diaries { get; set; }
-        public DbSet<AtwImage> Images { get; set; }
+        public DbSet<AtwImage> AtwImages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
