@@ -17,6 +17,22 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
             builder.HasOne(chapter => chapter.Diary).WithMany(diary => diary.Chapters);
             builder.HasOne(chapter => chapter.Image).WithMany(image => image.Chapters);
 
+            builder.HasData
+               (
+                   new Chapter
+                   {
+                       Id = 1,
+                       DiaryId=1,
+                       Name = "ChapterTest",
+                       Location = "ChapterLocation",
+                       Date = new DateTime(2020,7,6),
+                       Content="ChapterContentTest",
+                       CreatedOn = new DateTime(2020, 7, 7)
+                   }
+
+
+               );
+
         }
     }
 }
