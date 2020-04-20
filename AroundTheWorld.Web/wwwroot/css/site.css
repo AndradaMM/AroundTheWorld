@@ -94,12 +94,13 @@ body {
     align-items:flex-start;
     justify-content:space-evenly;
     width:800px;
+    flex-wrap:wrap;
     
 }
 
 
 .card-btn {
-    display: inline-block;
+    display:block;
     width: 100px;
     
 }
@@ -107,6 +108,11 @@ body {
 
 .card-btn-large{
     width:210px;
+}
+
+.card-edit-btn{
+    width:120px;
+    margin-bottom:10px;
 }
 
 .card-img {
@@ -124,12 +130,9 @@ body {
     padding: 30px;
     background-color: #f8f9fa9e;
     border: 1px solid #6c757d63;
+    margin-top:20px;
 }
 
-.card-body{
-    display:flex;
-    justify-content:space-between;
-}
 
 .card-add-diary{
     height:6rem;
@@ -140,3 +143,6 @@ body {
     justify-content: center;
 }
 
+.icon-margin-right {
+    margin-right: 10px;
+}
