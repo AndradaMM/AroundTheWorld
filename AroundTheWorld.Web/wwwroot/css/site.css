@@ -1,10 +1,19 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
+main{
+    display:flex;
+    justify-content:center;
+    padding-top:60px;
+}
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    
+    width:60px;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
@@ -38,9 +47,7 @@ html {
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
+
 
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
@@ -51,21 +58,85 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
+
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    
+    background-image: url("../images/background.jpg");
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+
+
+/*----------------------------------------------New css code---------------------------------------------*/
+
+.logo{
+    max-width: 100%;
+    height: auto;
 }
+
+.navbar {
+    background-color: #f8f9fa4f;
+    
+}
+
+.nav-link{
+    font-weight: 700;
+    color: #000000;
+}
+
+.nav-link:hover, 
+.nav-link:active
+{
+    color:#707070;
+}
+
+.cards-container{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-evenly;
+    width:800px;
+    
+}
+
+
+.card-btn {
+    display: inline-block;
+    width: 100px;
+    
+}
+
+
+.card-btn-large{
+    width:210px;
+}
+
+.card-img {
+    width: 200px;
+}
+
+.card-img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: inline-block;
+    width: 20rem;
+    padding: 30px;
+    background-color: #f8f9fa9e;
+    border: 1px solid #6c757d63;
+}
+
+.card-body{
+    display:flex;
+    justify-content:space-between;
+}
+
+.card-add-diary{
+    height:6rem;
+}
+
+.btn-add {
+    display: flex;
+    justify-content: center;
+}
+
