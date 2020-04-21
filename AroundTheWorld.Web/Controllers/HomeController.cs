@@ -22,6 +22,11 @@ namespace AroundTheWorld.Web.Controllers
         {
             return View();
         }
+        
+        public IActionResult StartANewDiary()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {

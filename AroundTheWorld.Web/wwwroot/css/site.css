@@ -146,3 +146,42 @@ body {
 .icon-margin-right {
     margin-right: 10px;
 }
+
+.card-new-diary {
+    display: inline-block;
+    width: 50rem;
+    height: 18rem;
+    padding: 30px;
+    background-color: #f8f9fa9e;
+    border: 1px solid #6c757d63;
+    margin-top: 20px;
+}
+
+.form-new-diary {
+    margin-top: 30px;
+    
+}
+
+
+.text-form-new-diary {
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom:5px;
+}
+
+.datepicker-new-diary{
+    width:125px;
+}
+
+.datepicker-icon {
+    position: absolute;
+    padding: 7px;
+    margin-left: 95px;
+}
+
+.btn-save-new-diary {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0.27rem;
+    width: 90px;
+}
