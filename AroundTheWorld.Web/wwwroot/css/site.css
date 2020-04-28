@@ -117,6 +117,7 @@ body {
 
 .card-img {
     width: 200px;
+    height: 128px;
 }
 
 .card-img-container {
@@ -185,3 +186,53 @@ body {
     padding: 0.27rem;
     width: 90px;
 }
+
+
+.public-diary-container {
+    width:69.15%;
+    margin: auto;
+}
+
+.card-public-diary {
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    color: #6c7988;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+
+
+.card-body-public-diary {
+    background-color: #e6e0d600;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-right: 0;
+    padding-top: 5px;
+    
+}
+
+.public-diary-location-date {
+    margin: 5px;
+    color: #6c7988;
+}
+
+
+.fa-globe-americas {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.fa-calendar-alt {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+

@@ -28,6 +28,11 @@ namespace AroundTheWorld.Web.Controllers
             return View();
         }
 
+        public IActionResult PublicDiaries()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
