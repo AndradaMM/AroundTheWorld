@@ -236,3 +236,41 @@ body {
     padding-left: 5px;
 }
 
+
+.card-account-settings {
+    width: 30rem;
+    height: 15rem;
+    
+}
+
+.card-account-settings-text{
+    margin-left:25px;
+}
+
+
+.body-account-settings {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+
+.btn-account-settings-edit {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    
+}
+
+.btn-account-settings-password {
+    width: 200px;
+    margin-bottom: 5px;
+    height: 40px;
+}
+
+.btn-account-settings-delete {
+    width: 180px;
+    margin-bottom: 5px;
+    height: 40px;
+}

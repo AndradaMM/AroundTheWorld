@@ -33,6 +33,11 @@ namespace AroundTheWorld.Web.Controllers
             return View();
         }
 
+        public IActionResult AccountSettings()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
