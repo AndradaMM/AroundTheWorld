@@ -38,6 +38,11 @@ namespace AroundTheWorld.Web.Controllers
             return View();
         }
 
+        public IActionResult EditEmailAddress()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

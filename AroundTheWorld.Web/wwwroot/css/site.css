@@ -274,3 +274,13 @@ body {
     margin-bottom: 5px;
     height: 40px;
 }
+
+.btn-success {
+    color: #fff;
+    background-color: #025a24;
+    border-color: #025a24;
+}
+
+.modal-content {
+    background-color: #ffffffbf;
+}

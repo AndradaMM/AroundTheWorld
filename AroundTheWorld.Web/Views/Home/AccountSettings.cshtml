@@ -6,9 +6,9 @@
 
     <div class="body-account-settings ">
         <div>
-            <button type="submit" class="btn btn-dark card-btn btn-account-settings-edit"><i class="far fa-edit icon-margin-right"></i>Edit email address</button>
-            <button type="submit" class="btn btn-dark card-btn btn-account-settings-password"><i class="far fa-edit icon-margin-right"></i>Change password</button>
-            <button type="submit" class="btn btn-dark card-btn btn-account-settings-delete"><i class="fas fa-trash icon-margin-right"></i>Delete account</button>
+            <button type="button" class="btn btn-dark card-btn btn-account-settings-edit" data-toggle="modal" data-target="#exampleModal"><i class="far fa-edit icon-margin-right"></i>Edit email address</button>
+            <button type="button" class="btn btn-dark card-btn btn-account-settings-password"><i class="far fa-edit icon-margin-right"></i>Change password</button>
+            <button type="button" class="btn btn-dark card-btn btn-account-settings-delete"><i class="fas fa-trash icon-margin-right"></i>Delete account</button>
         </div>
 
         <div  >
@@ -18,3 +18,4 @@
 
 
 </div>
+<partial name="EditEmailAddress" />
