@@ -291,10 +291,10 @@ body {
     height: 20rem;
 }
 
-.form-change-diary{
 
-}
-
-.body-change-diary{
-
+.delete-pop-up {
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    padding-right: 5px;
 }

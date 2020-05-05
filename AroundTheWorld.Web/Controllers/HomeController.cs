@@ -48,6 +48,11 @@ namespace AroundTheWorld.Web.Controllers
             return View();
         }
 
+        public IActionResult DeleteAccount()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
