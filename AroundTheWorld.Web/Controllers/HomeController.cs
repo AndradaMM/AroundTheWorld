@@ -43,6 +43,11 @@ namespace AroundTheWorld.Web.Controllers
             return View();
         }
 
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
