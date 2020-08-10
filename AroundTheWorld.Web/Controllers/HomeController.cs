@@ -53,6 +53,15 @@ namespace AroundTheWorld.Web.Controllers
             return View();
         }
 
+        public IActionResult EditDiary()
+        {
+            return View();
+        }
+        public IActionResult DeleteDiary()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

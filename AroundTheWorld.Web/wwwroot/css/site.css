@@ -291,10 +291,37 @@ body {
     height: 20rem;
 }
 
+.btn-save-new-password {
+    margin-left: 2px;
+}
 
 .delete-pop-up {
     padding-top: 5px;
     padding-left: 15px;
     padding-bottom: 5px;
     padding-right: 5px;
+}
+
+.edit-diary {
+    display: flex;
+    justify-content:space-between;
+    width: 1200px;
+}
+
+.card-list-of-chapters{
+    padding: 0;
+}
+.list-of-chapters {
+    width: 15rem;
+    height: 25rem;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.edit-diary-chapters {
+    
+}
+
+.chapter {
+
 }
