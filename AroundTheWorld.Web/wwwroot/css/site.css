@@ -367,6 +367,65 @@ body {
     height:260px;
 }
 
-.motto-new-chapter {
+.card-edit-chapter {
+    width: 55rem;
+    height: 25rem;
+}
 
+
+edit-chapter-text {
+
+}
+
+textarea.form-control {
+    width: 450px;
+    min-height:200px;
+    max-height: 200px;
+}
+
+.edit-chapter-container {
+    display: inline-flex;
+}
+
+.edit-chapter-fields {
+    margin-left:100px;
+}
+
+.edit-chapter-title {
+}
+
+.edit-chapter-location {
+
+}
+
+.date-label {
+    margin-bottom:0px;
+}
+
+.edit-chapter-date {
+}
+
+.edit-chapter-public-checkbox {
+    display:inline-block;
+}
+
+.edit-chapter-buttons {
+    margin-top: 30px;
+}
+
+.edit-chapter-delete-button {
+    display: inline-block;
+}
+
+.edit-chapter-save-button {
+    display: inline-block;
+    margin-left: 23px;
+}
+
+.form-group-fields> label {
+    margin-bottom: 0;
+}
+
+.form-group-fields {
+    margin-bottom:0px;
 }

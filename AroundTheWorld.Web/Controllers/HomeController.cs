@@ -67,6 +67,15 @@ namespace AroundTheWorld.Web.Controllers
             return View();
         }
 
+        public IActionResult DeleteChapter()
+        {
+            return View();
+        }
+        public IActionResult HomePage()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
