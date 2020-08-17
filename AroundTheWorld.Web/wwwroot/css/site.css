@@ -319,9 +319,54 @@ body {
 }
 
 .edit-diary-chapters {
-    
+    display: flex;
+    justify-content: space-between;
+    width: 40.5rem;
+    margin-right: 80px;
 }
 
 .chapter {
+    height: 25rem;
+}
+
+.notes-from-diary {
+    padding: 10px 20px 0px 20px;
+}
+
+.card-chapter-buttons {
+    display:inline-flex;
+    margin-left:95px;
+}
+
+.edit-chapter-button {
+    width: 40px;
+    margin: 0;
+    font-size:20px;
+    margin-left: 5px;
+}
+
+.edit-chapter-button:hover {
+    color: #3c3939c9;
+    cursor: pointer;
+}
+
+.delete-chapter-button {
+     width: 40px;
+     margin: 0;
+     font-size: 20px;
+}
+
+.delete-chapter-button:hover {
+     color: #3c3939c9;
+     cursor: pointer;
+}
+
+.btn-add-chapter {
+    margin-bottom:auto;
+    margin-top:auto;
+    height:260px;
+}
+
+.motto-new-chapter {
 
 }
