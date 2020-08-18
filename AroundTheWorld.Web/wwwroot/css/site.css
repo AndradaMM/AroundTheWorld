@@ -429,3 +429,29 @@ textarea.form-control {
 .form-group-fields {
     margin-bottom:0px;
 }
+
+.home-page {
+    
+}
+
+.logo-home-page {
+    width: 20rem;
+    margin-left: 70px;
+}
+
+.home-page-button-start {
+    margin-top: 15px;
+    height: 45px;
+    width: 180px;
+    margin-left:137px;
+    margin-bottom: 15px;
+}
+
+.logo-and-button {
+    display: grid;
+}
+
+.motto-home-page {
+    font-weight:bold;
+    margin-top:10px;
+}
