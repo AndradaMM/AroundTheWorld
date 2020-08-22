@@ -9,18 +9,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="DataSeed\black-panther-background.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AroundTheWorld.BusinessLogic\AroundTheWorld.BusinessLogic.csproj" />
     <ProjectReference Include="..\AroundTheWorld.Common\AroundTheWorld.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataSeed\beach.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -21,10 +21,52 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
                     new Diary
                     {
                         Id=1,
-                        Name="DiaryTest",
-                        Location="DiaryLocation",
+                        Name="London Trip",
+                        Location="London",
                         IsPublic=true,
-                        CreatedOn=new DateTime(2020,7,7)
+                        Date= new DateTime(2016, 7, 7),
+                        CreatedOn =new DateTime(2016, 7,7),
+                        ImageId = 1
+                    },
+                    new Diary
+                    {
+                        Id=2,
+                        Name="Paris Trip",
+                        Location="Paris",
+                        IsPublic=true,
+                        Date = new DateTime(2017, 7, 7),
+                        CreatedOn =new DateTime(2017, 7,7),
+                        ImageId = 2
+                    },
+                    new Diary
+                    {
+                        Id=3,
+                        Name="Berlin Trip",
+                        Location="Berlin",
+                        IsPublic=true,
+                        Date = new DateTime(2018, 7, 7),
+                        CreatedOn =new DateTime(2018, 7,7),
+                        ImageId = 3
+                    },
+                    new Diary
+                    {
+                        Id=4,
+                        Name="Lisboa Trip",
+                        Location="Lisboa",
+                        IsPublic=true,
+                        Date = new DateTime(2019, 7, 7),
+                        CreatedOn =new DateTime(2019, 7,7),
+                        ImageId = 4
+                    },
+                    new Diary
+                    {
+                        Id=5,
+                        Name="Madrid Trip",
+                        Location="Madrid",
+                        IsPublic=true,
+                        Date = new DateTime(2020, 7, 7),
+                        CreatedOn =new DateTime(2020,7,7),
+                        ImageId = 5
                     }
 
 

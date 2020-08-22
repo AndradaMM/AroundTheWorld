@@ -23,14 +23,22 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
                    {
                        Id = 1,
                        DiaryId=1,
-                       Name = "ChapterTest",
-                       Location = "ChapterLocation",
+                       Name = "Day 1",
+                       Location = "London",
                        Date = new DateTime(2020,7,6),
-                       Content="ChapterContentTest",
+                       Content="Chapter 1",
+                       CreatedOn = new DateTime(2020, 7, 7)
+                   },
+                   new Chapter
+                   {
+                       Id = 2,
+                       DiaryId=1,
+                       Name = "Day 2",
+                       Location = "London",
+                       Date = new DateTime(2020,7,6),
+                       Content="Chapter 2",
                        CreatedOn = new DateTime(2020, 7, 7)
                    }
-
-
                );
 
         }

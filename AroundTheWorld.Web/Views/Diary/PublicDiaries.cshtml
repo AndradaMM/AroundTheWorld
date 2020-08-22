@@ -1,0 +1,17 @@
+﻿@model IEnumerable<AroundTheWorld.Web.ViewModels.DiaryListItemViewModel>
+
+<div class="public-diary-container">
+    @foreach (var diary in Model)
+    {
+    <div class="card card-public-diary">
+        @(diary.Name) <span style="color:red">De stilizat name-ul diary-ului</span>
+        <div class="card-img-container">
+            <img class="card-img" src="@(diary.Image)" alt="public diary">
+        </div>
+        <div class="card-body card-body-public-diary ">
+            <p class="public-diary-location-date"><i class="fas fa-globe-americas"></i>@(diary.Location)</p>
+            <p class="public-diary-location-date"><i class="far fa-calendar-alt "></i>@(diary.Date.ToShortDateString())</p>
+        </div>
+    </div>
+    }
+</div>

@@ -12,5 +12,6 @@ namespace AroundTheWorld.BusinessLogic.IRepositories
         public void Add(Diary diary);
         public void Remove(Diary diary);
         public void SaveChanges();
+        IEnumerable<Diary> GetAllPulbic();
     }
 }

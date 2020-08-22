@@ -10,6 +10,7 @@ namespace AroundTheWorld.BusinessLogic.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public string Location { get; set; }
+        public DateTime Date { get; set; }
         public int? ImageId { get; set; }
         public bool IsPublic { get; set; }
         public DateTime CreatedOn { get; set; }

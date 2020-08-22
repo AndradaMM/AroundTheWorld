@@ -14,6 +14,7 @@ namespace AroundTheWorld.DataAccess.Repositories
         {
             _atwDbContext = atwDbContext;
         }
+
         public void Add(AtwImage atwImage)
         {
             _atwDbContext.AtwImages.Add(atwImage);

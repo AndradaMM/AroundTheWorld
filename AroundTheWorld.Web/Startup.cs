@@ -13,6 +13,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AroundTheWorld.DataAccess;
+using AroundTheWorld.BusinessLogic.IRepositories;
+using AroundTheWorld.DataAccess.Repositories;
 
 namespace AroundTheWorld.Web
 {
@@ -30,9 +32,12 @@ namespace AroundTheWorld.Web
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MembershipConnection")));
             services.AddDbContext<AtwDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("EntitiesConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+
+            services.AddScoped<IAtwImageRepository, AtwImageRepository>();
+            services.AddScoped<IDiaryRepository, DiaryRepository>();
 
             services.AddRazorPages();
         }

@@ -20,19 +20,16 @@ namespace AroundTheWorld.Web.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return View("HomePage");
+            }
         }
         
-        public IActionResult StartANewDiary()
-        {
-            return View();
-        }
-
-        public IActionResult PublicDiaries()
-        {
-            return View();
-        }
-
         public IActionResult AccountSettings()
         {
             return View();
@@ -53,24 +50,6 @@ namespace AroundTheWorld.Web.Controllers
             return View();
         }
 
-        public IActionResult EditDiary()
-        {
-            return View();
-        }
-        public IActionResult DeleteDiary()
-        {
-            return View();
-        }
-
-        public IActionResult EditChapter()
-        {
-            return View();
-        }
-
-        public IActionResult DeleteChapter()
-        {
-            return View();
-        }
         public IActionResult HomePage()
         {
             return View();

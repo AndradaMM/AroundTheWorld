@@ -2,10 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text;
 
 
 namespace AroundTheWorld.DataAccess.TypeConfigurations
@@ -19,14 +17,38 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
             builder.Property(atwImage => atwImage.Id).ValueGeneratedNever();
 
             var projectPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            
+
             builder.HasData
             (
                 new AtwImage
                 {
                     Id = 1,
-                    Content=File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/black-panther-background.jpg")),
-                    CreatedOn=new DateTime(2020,4,3)
+                    Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
+                    CreatedOn = new DateTime(2020, 4, 3)
+                },
+                new AtwImage
+                {
+                    Id = 2,
+                    Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
+                    CreatedOn = new DateTime(2020, 4, 3)
+                },
+                new AtwImage
+                {
+                    Id = 3,
+                    Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
+                    CreatedOn = new DateTime(2020, 4, 3)
+                },
+                new AtwImage
+                {
+                    Id = 4,
+                    Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
+                    CreatedOn = new DateTime(2020, 4, 3)
+                },
+                new AtwImage
+                {
+                    Id = 5,
+                    Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
+                    CreatedOn = new DateTime(2020, 4, 3)
                 }
              );
 
