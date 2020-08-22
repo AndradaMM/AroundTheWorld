@@ -455,3 +455,16 @@ textarea.form-control {
     font-weight:bold;
     margin-top:10px;
 }
+
+.card-login {
+    padding: 2rem;
+    width: 30rem;
+    height: 27rem;
+    margin: 0;
+}
+
+.card-reset-password {
+    width: 25rem;
+    height: 16rem;
+    padding: 2.5rem;
+}
