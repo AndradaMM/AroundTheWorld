@@ -18,7 +18,12 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: #000;
+}
+
+a:hover {
+    color: #707070;
+    text-decoration:none;
 }
 
 .btn-primary {
@@ -142,6 +147,7 @@ body {
 .btn-add {
     display: flex;
     justify-content: center;
+    color:#000;
 }
 
 .icon-margin-right {
@@ -206,16 +212,20 @@ body {
     height:17rem;
 }
 
+    .card-public-diary:hover {
+        background-color: #e8e9ea9e;
+    }
 
 
-.card-body-public-diary {
-    background-color: #e6e0d600;
-    padding-bottom: 1px;
-    padding-left: 10px;
-    padding-right: 0;
-    padding-top: 5px;
-    margin-top: 5px;
-}
+
+    .card-body-public-diary {
+        background-color: #e6e0d600;
+        padding-bottom: 1px;
+        padding-left: 10px;
+        padding-right: 0;
+        padding-top: 5px;
+        margin-top: 5px;
+    }
 
 .card-public-diary-title {
     font-weight: bold;
@@ -477,7 +487,7 @@ textarea.form-control {
     padding: 2.5rem;
 }
 
-.public-diary-container {
+.view-public-diary {
     display: flex;
     justify-content: space-between;
     width: 60rem;

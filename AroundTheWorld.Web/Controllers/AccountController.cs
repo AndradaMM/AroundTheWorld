@@ -17,6 +17,24 @@ namespace AroundTheWorld.Web.Controllers
         {
             _logger = logger;
         }
+        public IActionResult AccountSettings()
+        {
+            return View();
+        }
+        public IActionResult EditEmailAddress()
+        {
+            return View();
+        }
+
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        public IActionResult DeleteAccount()
+        {
+            return View();
+        }
         public IActionResult Login()
         {
             return View();

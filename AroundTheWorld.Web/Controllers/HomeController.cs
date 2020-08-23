@@ -29,36 +29,12 @@ namespace AroundTheWorld.Web.Controllers
                 return View("HomePage");
             }
         }
-        
-        public IActionResult AccountSettings()
-        {
-            return View();
-        }
-
-        public IActionResult EditEmailAddress()
-        {
-            return View();
-        }
-
-        public IActionResult ChangePassword()
-        {
-            return View();
-        }
-
-        public IActionResult DeleteAccount()
-        {
-            return View();
-        }
 
         public IActionResult HomePage()
         {
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

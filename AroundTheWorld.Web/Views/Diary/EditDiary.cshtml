@@ -87,7 +87,7 @@
                             <a><i class="fas fa-trash icon-margin-right"></i></a>
                         </div>
                         <div class="edit-chapter-button">
-                            <a><i class="far fa-edit icon-margin-right"></i></a>
+                            <a asp-controller="Chapter" asp-action="EditChapter"><i class="far fa-edit icon-margin-right"></i></a>
                         </div>
                     </div>
 
@@ -100,9 +100,9 @@
                         <h5 class="card-title">New chapter</h5>
                     </div>
                     <div class="btn-add btn-add-chapter">
-                        <button type="button" class="btn btn-default">
+                        <a asp-controller="Chapter" asp-action="EditChapter" class="btn btn-default">
                             <i class="fas fa-plus fa-5x"></i>
-                        </button>
+                        </a>
                     </div>
                     <div class="motto-new-chapter">
                         <p><i>'The journey of a thousand miles begins with a single step.'</i></p>

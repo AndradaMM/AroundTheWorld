@@ -8,9 +8,9 @@
             <h5 class="card-title text-center">Start a new diary</h5>
             <div class="card-add-diary">
                 <div class="btn-add">
-                    <button type="button" class="btn btn-default">
+                    <a asp-controller="Diary" asp-action="StartANewDiary">
                         <i class="fas fa-plus fa-4x"></i>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                 <img class="card-img" src="~/images/noImage.png" alt="Card image cap">
             </div>
             <div class="card-body">
-                <a href="#" class="btn btn-dark card-btn card-edit-btn">
+                <a asp-controller="Diary" asp-action="EditDiary" class="btn btn-dark card-btn card-edit-btn">
                     <i class="far fa-edit icon-margin-right"></i>Edit diary
                 </a>
                 <a href="#" class="btn btn-dark card-btn" data-toggle="modal" data-target="#DeleteDiary">
@@ -30,7 +30,7 @@
                 </a>
             </div>
         </div>
-
+        
 
         <div class="card">
             <h5 class="card-title text-center">My diary</h5>

@@ -4,16 +4,18 @@
     @foreach (var diary in Model)
     {
     <div class="card card-public-diary">
-        <div class="card-public-diary-title">
-            @(diary.Name)
-        </div>
-        <div class="card-img-container">
-            <img class="card-img" src="@(diary.Image)" alt="public diary">
-        </div>
-        <div class="card-body card-body-public-diary ">
-            <p class="public-diary-location-date"><i class="fas fa-globe-americas"></i>@(diary.Location)</p>
-            <p class="public-diary-location-date"><i class="far fa-calendar-alt "></i>@(diary.Date.ToShortDateString())</p>
-        </div>
+        <a asp-controller="Diary" asp-action="ViewPublicDiary">
+            <div class="card-public-diary-title">
+                @(diary.Name)
+            </div>
+            <div class="card-img-container">
+                <img class="card-img" src="@(diary.Image)" alt="public diary">
+            </div>
+            <div class="card-body card-body-public-diary ">
+                <p class="public-diary-location-date"><i class="fas fa-globe-americas"></i>@(diary.Location)</p>
+                <p class="public-diary-location-date"><i class="far fa-calendar-alt "></i>@(diary.Date.ToShortDateString())</p>
+            </div>
+        </a>
     </div>
     }
 </div>

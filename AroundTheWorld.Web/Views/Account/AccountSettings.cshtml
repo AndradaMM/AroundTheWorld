@@ -7,7 +7,7 @@
     <div class="body-account-settings ">
         <div>
             <button type="button" class="btn btn-dark card-btn btn-account-settings-edit" data-toggle="modal" data-target="#edit-email-address"><i class="far fa-edit icon-margin-right"></i>Edit email address</button>
-            <button type="button" class="btn btn-dark card-btn btn-account-settings-password"><i class="far fa-edit icon-margin-right"></i>Change password</button>
+            <a asp-controller="Account" asp-action="ChangePassword" class="btn btn-dark card-btn btn-account-settings-password"><i class="far fa-edit icon-margin-right"></i>Change password</a>
             <button type="button" class="btn btn-dark card-btn btn-account-settings-delete" data-toggle="modal" data-target="#delete-account" ><i class="fas fa-trash icon-margin-right"></i>Delete account</button>
         </div>
 
