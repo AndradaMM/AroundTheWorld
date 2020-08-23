@@ -477,47 +477,47 @@ textarea.form-control {
     padding: 2.5rem;
 }
 
-.view-public-diary {
-    width:100%;
+.public-diary-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60rem;
 }
 
-.view-public-diary-title {
-    margin-left: 4%;
+.public-diary-chapters {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
 }
 
-.list-of-public-chapters {
-
-}
-
-.chapter-content {
+.public-diary-chapters-list {
     height: 25rem;
-    width: 50rem;
-    margin-left:3rem;
-    bottom: 142px;
+    overflow-y: auto;
+    background-color: #f8f9fa9e;
 }
 
-.location-public-chapter {
+.public-diary-chapter {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    padding: 30px;
+    background-color: #f8f9fa9e;
+    border: 1px solid #6c757d63;
+}
+.public-chapter-details {
+    width: 35%;
 }
 
-.date-public-chapter {
-
-}
-
-.public-chapter-information {
-    display: inline-block;
-    width: 40%;
+.public-chapter-detail {
+    margin: 0;
 }
 
 .public-chapter-content {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    height: 10rem;
-    overflow: auto;
-    display: inline-block;
-    width: 47%;
+    width: 60%;
+    height: 25rem;
+    overflow-y: auto;
 }
 
-.public-chapter-container {
-    display: inline-block;
-    position: static;
+.public-chapter-image {
+    margin-top: 30%;
 }
