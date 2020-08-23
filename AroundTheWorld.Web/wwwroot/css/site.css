@@ -406,8 +406,12 @@ textarea.form-control {
     display: inline-flex;
 }
 
+#upload-image {
+    margin-top: 2rem;
+}
+
 .edit-chapter-fields {
-    margin-left:100px;
+    margin-left: 100px;
 }
 
 .edit-chapter-title {
