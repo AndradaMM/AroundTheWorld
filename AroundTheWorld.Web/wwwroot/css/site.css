@@ -157,7 +157,7 @@ body {
 .card-new-diary {
     display: inline-block;
     width: 50rem;
-    height: 18rem;
+    height: 22rem;
     padding: 30px;
     background-color: #f8f9fa9e;
     border: 1px solid #6c757d63;
@@ -530,4 +530,23 @@ textarea.form-control {
 
 .public-chapter-image {
     margin-top: 30%;
+}
+
+#location {
+    width: 15rem;
+    display: inline-block;
+    font-style: italic;
+}
+
+.location-new-diary {
+    position: relative;
+    margin-left: -5px;
+    margin-bottom: 5px;
+    
+}
+
+.location-new-diary-icon {
+    position: absolute;
+    bottom: 5px;
+    left: 13rem;
 }

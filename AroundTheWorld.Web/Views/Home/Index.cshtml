@@ -1,8 +1,9 @@
-﻿@{
+﻿@model IEnumerable<AroundTheWorld.Web.ViewModels.DiaryRelated.DiaryListItemViewModel>
+@{
     ViewData["Title"] = "Home Page";
 }
-    
-    <div class="cards-container">
+
+<div class="cards-container">
 
         <div class="card">
             <h5 class="card-title text-center">Start a new diary</h5>
@@ -15,11 +16,12 @@
             </div>
         </div>
 
-
+    @foreach (var diary in Model)
+    {
         <div class="card">
-            <h5 class="card-title text-center">My diary</h5>
+            <h5 class="card-title text-center">@(diary.Name)</h5>
             <div class="card-img-container">
-                <img class="card-img" src="~/images/noImage.png" alt="Card image cap">
+                <img class="card-img" src="@(diary.Image)" alt="Card image cap">
             </div>
             <div class="card-body">
                 <a asp-controller="Diary" asp-action="EditDiary" class="btn btn-dark card-btn card-edit-btn">
@@ -30,74 +32,7 @@
                 </a>
             </div>
         </div>
-        
+    }
+</div>
 
-        <div class="card">
-            <h5 class="card-title text-center">My diary</h5>
-            <div class="card-img-container">
-                <img class="card-img" src="~/images/noImage.png" alt="Card image cap">
-            </div>
-            <div class="card-body">
-                <a href="#" class="btn btn-dark card-btn card-edit-btn">
-                    <i class="far fa-edit icon-margin-right"></i>Edit diary
-                </a>
-                <a href="#" class="btn btn-dark card-btn">
-                    <i class="fas fa-trash icon-margin-right"></i>Delete
-                </a>
-            </div>
-        </div>
-
-
-        <div class="card">
-            <h5 class="card-title text-center">My diary</h5>
-            <div class="card-img-container">
-                <img class="card-img" src="~/images/noImage.png" alt="Card image cap">
-            </div>
-            <div class="card-body">
-                <a href="#" class="btn btn-dark card-btn card-edit-btn">
-                    <i class="far fa-edit icon-margin-right"></i>Edit diary
-                </a>
-                <a href="#" class="btn btn-dark card-btn">
-                    <i class="fas fa-trash icon-margin-right"></i>Delete
-                </a>
-            </div>
-        </div>
-
-
-        <div class="card">
-            <h5 class="card-title text-center">My diary</h5>
-            <div class="card-img-container">
-                <img class="card-img" src="~/images/noImage.png" alt="Card image cap">
-            </div>
-            <div class="card-body">
-                <a href="#" class="btn btn-dark card-btn card-edit-btn">
-                    <i class="far fa-edit icon-margin-right"></i>Edit diary
-                </a>
-                <a href="#" class="btn btn-dark card-btn">
-                    <i class="fas fa-trash icon-margin-right"></i>Delete
-                </a>
-            </div>
-        </div>
-
-
-        <div class="card">
-            <h5 class="card-title text-center">My diary</h5>
-            <div class="card-img-container">
-                <img class="card-img" src="~/images/noImage.png" alt="Card image cap">
-            </div>
-            <div class="card-body">
-                <a href="#" class="btn btn-dark card-btn card-edit-btn">
-                    <i class="far fa-edit icon-margin-right"></i>Edit diary
-                </a>
-                <a href="#" class="btn btn-dark card-btn">
-                    <i class="fas fa-trash icon-margin-right"></i>Delete
-                </a>
-            </div>
-        </div>
-
-
-
-
-    </div>
-
-    <partial name="~/Views/Diary/DeleteDiary.cshtml" />
+<partial name="~/Views/Diary/DeleteDiary.cshtml" />

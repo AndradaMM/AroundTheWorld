@@ -4,14 +4,16 @@ using AroundTheWorld.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AroundTheWorld.DataAccess.Migrations
 {
     [DbContext(typeof(AtwDbContext))]
-    partial class AtwDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200822144726_UpdateSeedChapterData")]
+    partial class UpdateSeedChapterData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -244,9 +246,6 @@ namespace AroundTheWorld.DataAccess.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ImageId");
@@ -261,8 +260,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                             Date = new DateTime(2016, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ImageId = 1,
                             Location = "London",
-                            Name = "London Trip",
-                            UserId = new Guid("5142926a-df50-4ec6-a498-624e6b7834ad")
+                            Name = "London Trip"
                         },
                         new
                         {
@@ -271,8 +269,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                             Date = new DateTime(2017, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ImageId = 2,
                             Location = "Paris",
-                            Name = "Paris Trip",
-                            UserId = new Guid("5142926a-df50-4ec6-a498-624e6b7834ad")
+                            Name = "Paris Trip"
                         },
                         new
                         {
@@ -281,8 +278,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                             Date = new DateTime(2018, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ImageId = 3,
                             Location = "Berlin",
-                            Name = "Berlin Trip",
-                            UserId = new Guid("5142926a-df50-4ec6-a498-624e6b7834ad")
+                            Name = "Berlin Trip"
                         },
                         new
                         {
@@ -291,8 +287,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                             Date = new DateTime(2019, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ImageId = 4,
                             Location = "Lisboa",
-                            Name = "Lisboa Trip",
-                            UserId = new Guid("5142926a-df50-4ec6-a498-624e6b7834ad")
+                            Name = "Lisboa Trip"
                         },
                         new
                         {
@@ -301,8 +296,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                             Date = new DateTime(2020, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ImageId = 5,
                             Location = "Madrid",
-                            Name = "Madrid Trip",
-                            UserId = new Guid("5142926a-df50-4ec6-a498-624e6b7834ad")
+                            Name = "Madrid Trip"
                         });
                 });
 

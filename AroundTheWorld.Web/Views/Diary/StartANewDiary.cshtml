@@ -1,21 +1,24 @@
-﻿
+﻿@model AroundTheWorld.Web.ViewModels.DiaryRelated.NewDiaryViewModel
 
-    <div class="card card-new-diary">
-        <h5 class="card-title text-center">New diary</h5>
-        <form>
-
-            <div class="form-new-diary body-form-new-diary">
-                <label for="newDiary">Start a new diary. Just fill in the name and you can start directly</label>
-                <input type="text" class="form-control text-form-new-diary" placeholder="Enter your diary name">
-                @*<input type="date" class="form-control datepicker-new-diary" />*@
-                <div>
-                    <label for="start-date" class="datepicker-icon"><i class="far fa-calendar-alt "></i></label>
-                    <input id="start-date" data-provide="datepicker" class="form-control datepicker-new-diary">
-                </div>
-
-               
-
+<div class="card card-new-diary">
+    <h5 class="card-title text-center">New diary</h5>
+    <form asp-controller="Diary" asp-action="SaveNewDiary">
+        <div class="form-new-diary body-form-new-diary">
+            <label for="newDiary">Start a new diary. Just fill in the name and you can start directly</label>
+            <input type="text" class="form-control text-form-new-diary" placeholder="Enter your diary name"
+                   asp-for="Name">
+            <div class="location-new-diary">
+                <label for="location"><i class="fas fa-globe-americas location-new-diary-icon"></i></label>
+                <input id="location" class="form-control" placeholder="Enter the location" />
             </div>
-            <button type="button" class="btn card-btn btn-save-new-diary btn-success"><i class="far fa-save icon-margin-right"></i>Save</button>
-        </form>
-    </div>
+            <div>
+                <label for="start-date" class="datepicker-icon"><i class="far fa-calendar-alt "></i></label>
+                <input id="start-date" data-provide="datepicker" class="form-control datepicker-new-diary"
+                       asp-for="Date">
+            </div>
+        </div>
+        <button class="btn card-btn btn-save-new-diary btn-success">
+            <i class="far fa-save icon-margin-right"></i>Save
+        </button>
+    </form>
+</div>

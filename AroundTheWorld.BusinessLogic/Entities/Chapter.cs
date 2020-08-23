@@ -13,6 +13,7 @@ namespace AroundTheWorld.BusinessLogic.Entities
         public DateTime Date { get; set; }
         public int? ImageId { get; set; }
         public string Content { get; set; }
+        public bool IsPublic { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime? ModifiedOn { get; set; }
 

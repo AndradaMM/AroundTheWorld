@@ -6,28 +6,44 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AroundTheWorld.Web.Models;
+using AroundTheWorld.BusinessLogic.IRepositories;
+using AroundTheWorld.Web.ViewModels.DiaryRelated;
 
 namespace AroundTheWorld.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IDiaryRepository _diaryRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IDiaryRepository diaryRepository)
         {
-            _logger = logger;
+            _diaryRepository = diaryRepository;
         }
 
         public IActionResult Index()
         {
-            if (User.Identity.IsAuthenticated)
+            if (!User.Identity.IsAuthenticated)
             {
-                return View();
-            }
-            else
-            {
+
                 return View("HomePage");
             }
+
+            var userId = Guid.Parse(User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")
+                .Value);
+
+            var diaries = _diaryRepository.GetAllByUserId(userId);
+            var diaryViewModels = new List<DiaryListItemViewModel>();
+
+            foreach (var diary in diaries)
+            {
+                var diaryViewModel = new DiaryListItemViewModel(diary);
+                diaryViewModels.Add(diaryViewModel);
+            }
+
+            return View(diaryViewModels);
+
+
+            // 
         }
 
         public IActionResult HomePage()

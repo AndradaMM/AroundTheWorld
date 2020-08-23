@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AroundTheWorld.Web.ViewModels
+namespace AroundTheWorld.Web.ViewModels.ChapterRelated
 {
     public class ChapterViewModel
     {
@@ -26,5 +26,5 @@ namespace AroundTheWorld.Web.ViewModels
             Content = chapter.Content;
             Image = chapter.Image.Content;
         }
-    } 
+    }
 }

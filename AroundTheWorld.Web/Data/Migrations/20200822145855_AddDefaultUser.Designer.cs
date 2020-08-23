@@ -4,14 +4,16 @@ using AroundTheWorld.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AroundTheWorld.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200822145855_AddDefaultUser")]
+    partial class AddDefaultUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -139,15 +141,14 @@ namespace AroundTheWorld.Web.Data.Migrations
                         {
                             Id = "5142926a-df50-4ec6-a498-624e6b7834ad",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a443e92f-334a-4eec-ac31-063859625aee",
+                            ConcurrencyStamp = "0a3cac49-5aeb-4e4f-95aa-163bd9dc9a83",
                             Email = "user@test.com",
                             EmailConfirmed = true,
                             LockoutEnabled = true,
                             NormalizedEmail = "USER@TEST.COM",
                             NormalizedUserName = "USER@TEST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGBYwhKluUz15TvCpk1nwUjLLOeA52MAhQO/1aaXRnJT43V68jN8ZiixeYAUQsA/qA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "96c28bb9-598d-42a3-8286-00485630fd49",
+                            SecurityStamp = "a581e6b8-5f70-40f2-ac8c-2cdc242f6d14",
                             TwoFactorEnabled = false,
                             UserName = "user@test.com"
                         });

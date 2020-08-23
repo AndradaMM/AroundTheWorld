@@ -12,9 +12,9 @@ namespace AroundTheWorld.BusinessLogic.Entities
         public string Location { get; set; }
         public DateTime Date { get; set; }
         public int? ImageId { get; set; }
-        public bool IsPublic { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime? ModifiedOn { get; set; }
+        public Guid UserId { get; set; }
 
         public AtwImage Image { get; set; }
         public ICollection<Chapter> Chapters { get; set; }

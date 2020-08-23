@@ -49,6 +49,42 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
                     Id = 5,
                     Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
                     CreatedOn = new DateTime(2020, 4, 3)
+                },
+                new AtwImage
+                {
+                    Id = 6,
+                    Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
+                    CreatedOn = new DateTime(2020, 4, 3)
+                },
+                new AtwImage
+                {
+                    Id = 7,
+                    Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
+                    CreatedOn = new DateTime(2020, 4, 3)
+                },
+                new AtwImage
+                {
+                    Id = 8,
+                    Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
+                    CreatedOn = new DateTime(2020, 4, 3)
+                },
+                new AtwImage
+                {
+                    Id = 9,
+                    Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
+                    CreatedOn = new DateTime(2020, 4, 3)
+                },
+                new AtwImage
+                {
+                    Id = 10,
+                    Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
+                    CreatedOn = new DateTime(2020, 4, 3)
+                },
+                new AtwImage
+                {
+                    Id = 11,
+                    Content = File.ReadAllBytes(Path.Combine(projectPath, "DataSeed/beach.jpg")),
+                    CreatedOn = new DateTime(2020, 4, 3)
                 }
              );
 

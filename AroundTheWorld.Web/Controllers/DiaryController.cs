@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AroundTheWorld.BusinessLogic.Entities;
 using AroundTheWorld.BusinessLogic.IRepositories;
-using AroundTheWorld.Web.ViewModels;
+using AroundTheWorld.Web.ViewModels.DiaryRelated;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AroundTheWorld.Web.Controllers
@@ -12,15 +12,19 @@ namespace AroundTheWorld.Web.Controllers
     public class DiaryController : Controller
     {
         private readonly IDiaryRepository _diaryRepository;
-        private readonly IAtwImageRepository _atwImageRepository;
 
-        public DiaryController(IDiaryRepository diaryRepository, IAtwImageRepository atwImageRepository)
+        public DiaryController(IDiaryRepository diaryRepository)
         {
             _diaryRepository = diaryRepository;
-            _atwImageRepository = atwImageRepository;
         }
 
         public IActionResult StartANewDiary()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SaveNewDiary(NewDiaryViewModel model)
         {
             return View();
         }

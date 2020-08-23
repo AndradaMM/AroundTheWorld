@@ -1,5 +1,6 @@
 ﻿using AroundTheWorld.BusinessLogic.Entities;
 using AroundTheWorld.BusinessLogic.IRepositories;
+using AroundTheWorld.DataAccess.TypeConfigurations;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,16 @@ namespace AroundTheWorld.DataAccess.Repositories
 
         public IEnumerable<Diary> GetAllPulbic()
         {
-            return _atwDbContext.Diaries.Include(d => d.Image).Where(d => d.IsPublic);
+            return _atwDbContext.Diaries
+                .Include(d => d.Image)
+                .Where(d => d.Chapters.Any(c => c.IsPublic));
+        }
+
+        public IEnumerable<Diary> GetAllByUserId(Guid userId)
+        {
+            return _atwDbContext.Diaries
+                .Include(d => d.Image)
+                .Where(d => d.UserId == userId);
         }
 
         public void Remove(Diary diary)

@@ -4,24 +4,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AroundTheWorld.Web.ViewModels
+namespace AroundTheWorld.Web.ViewModels.DiaryRelated
 {
-    public class DiaryViewModel
-    {    
+    public class DiaryListItemViewModel
+    {
         public int Id { get; set; }
         public string Name { get; set; }
+        public DateTime Date { get; set; }
         public string Location { get; set; }
-        public bool IsPublic { get; set; }
-        public byte[] Image { get; set; }
-        public ICollection<ChapterViewModel> Chapters { get; set; }
+        public string Image { get; set; }
 
-        public DiaryViewModel(Diary diary)
+        public DiaryListItemViewModel(Diary diary)
         {
             Id = diary.Id;
+            Date = diary.Date;
             Name = diary.Name;
             Location = diary.Location;
-            IsPublic = diary.IsPublic;
-            Image = diary.Image.Content;
+            Image = "data:image/png;base64," + Convert.ToBase64String(diary.Image.Content);
         }
     }
 }
