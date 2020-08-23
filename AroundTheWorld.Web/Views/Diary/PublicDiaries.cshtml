@@ -4,7 +4,9 @@
     @foreach (var diary in Model)
     {
     <div class="card card-public-diary">
-        @(diary.Name) <span style="color:red">De stilizat name-ul diary-ului</span>
+        <div class="card-public-diary-title">
+            @(diary.Name)
+        </div>
         <div class="card-img-container">
             <img class="card-img" src="@(diary.Image)" alt="public diary">
         </div>

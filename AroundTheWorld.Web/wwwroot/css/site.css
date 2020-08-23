@@ -5,7 +5,7 @@ for details on configuring this project to bundle and minify static web assets. 
 main{
     display:flex;
     justify-content:center;
-    padding-top:60px;
+    padding-top:40px;
 }
 
 a.navbar-brand {
@@ -203,6 +203,7 @@ body {
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 30px;
+    height:17rem;
 }
 
 
@@ -213,7 +214,14 @@ body {
     padding-left: 10px;
     padding-right: 0;
     padding-top: 5px;
-    
+    margin-top: 5px;
+}
+
+.card-public-diary-title {
+    font-weight: bold;
+    margin-top: 2px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .public-diary-location-date {
@@ -467,4 +475,49 @@ textarea.form-control {
     width: 25rem;
     height: 16rem;
     padding: 2.5rem;
+}
+
+.view-public-diary {
+    width:100%;
+}
+
+.view-public-diary-title {
+    margin-left: 4%;
+}
+
+.list-of-public-chapters {
+
+}
+
+.chapter-content {
+    height: 25rem;
+    width: 50rem;
+    margin-left:3rem;
+    bottom: 142px;
+}
+
+.location-public-chapter {
+}
+
+.date-public-chapter {
+
+}
+
+.public-chapter-information {
+    display: inline-block;
+    width: 40%;
+}
+
+.public-chapter-content {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    height: 10rem;
+    overflow: auto;
+    display: inline-block;
+    width: 47%;
+}
+
+.public-chapter-container {
+    display: inline-block;
+    position: static;
 }

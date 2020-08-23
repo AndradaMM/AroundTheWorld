@@ -63,5 +63,10 @@ namespace AroundTheWorld.Web.Controllers
             _diaryRepository.SaveChanges();
             return View();
         }
+
+        public IActionResult ViewPublicDiary()
+        {
+            return View();
+        }
     }
 }
