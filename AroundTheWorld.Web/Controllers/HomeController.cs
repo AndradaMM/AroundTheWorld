@@ -34,16 +34,13 @@ namespace AroundTheWorld.Web.Controllers
             var diaries = _diaryRepository.GetAllByUserId(userId);
             var diaryViewModels = new List<DiaryListItemViewModel>();
 
-            foreach (var diary in diaries)
+            foreach (var diary in diaries.OrderByDescending(d => d.Date))
             {
                 var diaryViewModel = new DiaryListItemViewModel(diary);
                 diaryViewModels.Add(diaryViewModel);
             }
 
             return View(diaryViewModels);
-
-
-            // 
         }
 
         public IActionResult HomePage()

@@ -13,7 +13,6 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
         {
             builder.ToTable("tblDiary");
             builder.HasKey(diary => diary.Id);
-            builder.Property(diary => diary.Id).ValueGeneratedNever();
             builder.HasOne(diary => diary.Image).WithMany(image => image.Diaries);
 
             builder.HasData

@@ -177,13 +177,14 @@ body {
 }
 
 .datepicker-new-diary{
-    width:125px;
+    width:150px;
+    font-style:italic;
 }
 
 .datepicker-icon {
     position: absolute;
     padding: 7px;
-    margin-left: 95px;
+    margin-left: 115px;
 }
 
 .btn-save-new-diary {

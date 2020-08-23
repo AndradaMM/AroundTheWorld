@@ -4,7 +4,6 @@
 }
 
 <div class="cards-container">
-
         <div class="card">
             <h5 class="card-title text-center">Start a new diary</h5>
             <div class="card-add-diary">
@@ -15,13 +14,19 @@
                 </div>
             </div>
         </div>
-
     @foreach (var diary in Model)
     {
         <div class="card">
             <h5 class="card-title text-center">@(diary.Name)</h5>
             <div class="card-img-container">
-                <img class="card-img" src="@(diary.Image)" alt="Card image cap">
+                @if (string.IsNullOrWhiteSpace(diary.Image))
+                {
+                    <img class="card-img" src="~/images/noImage.png" alt="Card image cap">
+                }
+                else
+                {
+                    <img class="card-img" src="@(diary.Image)" alt="Card image cap">
+                }
             </div>
             <div class="card-body">
                 <a asp-controller="Diary" asp-action="EditDiary" class="btn btn-dark card-btn card-edit-btn">

@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200823173104_MakeIdsIdentity.cs" />
+    <Compile Remove="Migrations\20200823173104_MakeIdsIdentity.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="DataSeed\black-panther-background.jpg" />
   </ItemGroup>
 

@@ -1,6 +1,7 @@
 ﻿using AroundTheWorld.BusinessLogic.Entities;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -20,7 +21,10 @@ namespace AroundTheWorld.Web.ViewModels.DiaryRelated
             Date = diary.Date;
             Name = diary.Name;
             Location = diary.Location;
-            Image = "data:image/png;base64," + Convert.ToBase64String(diary.Image.Content);
+            if (diary.Image != null)
+            {
+                Image = "data:image/png;base64," + Convert.ToBase64String(diary.Image.Content);
+            }
         }
     }
 }

@@ -8,12 +8,6 @@
   <ItemGroup>
     <Compile Remove="Data\Migrations\20200307113450_Initial.cs" />
     <Compile Remove="Data\Migrations\20200307113450_Initial.Designer.cs" />
-    <Compile Remove="ViewModels\ChapterListItemViewModel.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Chapter\DeleteChapter.cshtml" />
-    <None Include="Views\Chapter\EditChapter.cshtml" />
   </ItemGroup>
 
 

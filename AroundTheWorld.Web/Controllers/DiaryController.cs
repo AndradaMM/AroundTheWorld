@@ -24,14 +24,36 @@ namespace AroundTheWorld.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult SaveNewDiary(NewDiaryViewModel model)
+        public IActionResult StartANewDiary(NewDiaryViewModel model)
         {
-            return View();
+            var isDateValid = DateTime.TryParse(model.Date, out var parsedDate);
+            if (!isDateValid)
+            {
+                ModelState.AddModelError(nameof(NewDiaryViewModel.Date), "Invalid date");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var userId = Guid.Parse(User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier").Value);
+            var diary = new Diary
+            {
+                Name = model.Name,
+                Date = parsedDate,
+                Location = model.Location,
+                UserId = userId
+            };
+
+            _diaryRepository.Add(diary);
+            _diaryRepository.SaveChanges();
+
+            return RedirectToAction("EditDiary");
         }
 
         public IActionResult PublicDiaries()
         {
-            // User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")
             var diaries = _diaryRepository.GetAllPulbic();
             var diariesViewModels = new List<DiaryListItemViewModel>();
 
@@ -48,16 +70,6 @@ namespace AroundTheWorld.Web.Controllers
         {
             var diary = _diaryRepository.GetById(id);
             return View();
-        }
-
-        public IActionResult SaveDiary(Diary diary)
-        {
-
-            throw new NotImplementedException();
-            if(diary.Id > 0)
-            {
-                
-            }
         }
 
         public IActionResult DeleteDiary(int id)
