@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AroundTheWorld.Web.ViewModels.DiaryRelated
 {
-    public class DiaryViewModel
+    public class PublicDiaryViewModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -16,7 +16,7 @@ namespace AroundTheWorld.Web.ViewModels.DiaryRelated
         public byte[] Image { get; set; }
         public ICollection<ChapterViewModel> Chapters { get; set; }
 
-        public DiaryViewModel(Diary diary)
+        public PublicDiaryViewModel(Diary diary)
         {
             Id = diary.Id;
             Name = diary.Name;

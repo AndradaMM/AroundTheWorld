@@ -9,7 +9,6 @@ namespace AroundTheWorld.Web.ViewModels.ChapterRelated
     public class ChapterViewModel
     {
         public int Id { get; set; }
-        public int DiaryId { get; set; }
         public string Name { get; set; }
         public string Location { get; set; }
         public DateTime Date { get; set; }
@@ -19,12 +18,15 @@ namespace AroundTheWorld.Web.ViewModels.ChapterRelated
         public ChapterViewModel(Chapter chapter)
         {
             Id = chapter.Id;
-            DiaryId = chapter.DiaryId;
             Name = chapter.Name;
             Location = chapter.Location;
             Date = chapter.Date;
             Content = chapter.Content;
             Image = chapter.Image.Content;
+        }
+
+        public ChapterViewModel()
+        {
         }
     }
 }

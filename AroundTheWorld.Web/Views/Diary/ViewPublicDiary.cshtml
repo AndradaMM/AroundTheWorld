@@ -1,7 +1,9 @@
-﻿<div class="view-public-diary">
+﻿@model AroundTheWorld.Web.ViewModels.DiaryRelated.PublicDiaryWithChapters
+
+<div class="view-public-diary">
     <div class="public-diary-chapters">
         <div>
-            <h3>Diary name</h3>
+            <h3>@(Model.DiaryName)</h3>
         </div>
         <div class="public-diary-chapters-list">
             <table class="table table-striped">
@@ -11,51 +13,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Mark</td>
-                    </tr>
-                    <tr>
-                        <td>Jacob</td>
-                    </tr>
-                    <tr>
-                        <td>Larry</td>
-                    </tr>
-                    <tr>
-                        <td>Mark</td>
-                    </tr>
-                    <tr>
-                        <td>Jacob</td>
-                    </tr>
-                    <tr>
-                        <td>Larry</td>
-                    </tr>
-                    <tr>
-                        <td>Mark</td>
-                    </tr>
-                    <tr>
-                        <td>Jacob</td>
-                    </tr>
-                    <tr>
-                        <td>Larry</td>
-                    </tr>
-                    <tr>
-                        <td>Mark</td>
-                    </tr>
-                    <tr>
-                        <td>Jacob</td>
-                    </tr>
-                    <tr>
-                        <td>Larry</td>
-                    </tr>
-                    <tr>
-                        <td>Mark</td>
-                    </tr>
-                    <tr>
-                        <td>Jacob</td>
-                    </tr>
-                    <tr>
-                        <td>Larry</td>
-                    </tr>
+                    @foreach (var chapter in Model.Chapters)
+                    {
+                        <tr>
+                            <td>@chapter.Name</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>

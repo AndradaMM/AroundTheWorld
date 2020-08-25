@@ -560,9 +560,10 @@ textarea.form-control {
     padding: 30px;
     background-color: #f8f9fa9e;
     border: 1px solid #6c757d63;
-    margin-top: 20px;
+
 }
 
 .account-settings-menu .nav-pills .nav-item .nav-link.active {
     background-color: #343a40;
 }
+
