@@ -1,0 +1,21 @@
+﻿@model AroundTheWorld.Web.ViewModels.DiaryRelated.NewDiaryViewModel
+<div class="card edit-diary-information">
+    <h4>Edit diary information</h4>
+    <div class="form-new-diary body-edit-diary-information">
+        <input type="text" class="form-control text-form-new-diary edit-diary-diary-name" value="Name"
+               asp-for="Name">
+        <div class="location-new-diary edit-diary-diary-location">
+            <label for="location"><i class="fas fa-globe-americas location-new-diary-icon"></i></label>
+            <input id="location" class="form-control" value="Location" asp-for="Location" />
+        </div>
+        <div class="edit-diary-diary-date">
+            <label for="start-date" class="datepicker-icon"><i class="far fa-calendar-alt "></i></label>
+            <input id="start-date" data-provide="datepicker" class="form-control datepicker-new-diary"
+                   asp-for="Date" value="Date">
+        </div>
+        <input type="file" id="edit-diary-upload-image" />
+    </div>
+    <button class="btn btn-save-new-diary btn-success edit-diary-information-button">
+        <i class="far fa-save icon-margin-right"></i>Save
+    </button>
+</div>
