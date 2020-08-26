@@ -321,10 +321,43 @@ body {
     padding-right: 5px;
 }*/
 
+.edit-diary-information {
+    width: 65rem;
+    margin-top: 0px;
+    margin-left: 2.5rem;
+}
+
+.body-edit-diary-information {
+    margin-top: 0;
+    display: flex;
+    padding-left: 50px;
+}
+
+.edit-diary-diary-name {
+    margin: 5px;
+    margin-right:10px;
+    width: 25rem;
+}
+
+.edit-diary-diary-location {
+    margin: 5px;
+    margin-left:0px;
+}
+
+.edit-diary-diary-date {
+    margin: 5px;
+}
+
+.edit-diary-information-button {
+    margin: 5px;
+    margin-left: 55px;
+}
+
 .edit-diary {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     width: 1200px;
+    padding: 40px;
 }
 
 .card-list-of-chapters{
