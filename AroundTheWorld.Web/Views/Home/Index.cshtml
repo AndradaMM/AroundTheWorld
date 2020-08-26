@@ -29,7 +29,7 @@
                 }
             </div>
             <div class="card-body">
-                <a asp-controller="Diary" asp-action="EditDiary" class="btn btn-dark card-btn card-edit-btn">
+                <a asp-controller="Diary" asp-action="EditDiary" asp-route-id="@diary.Id" class="btn btn-dark card-btn card-edit-btn">
                     <i class="far fa-edit icon-margin-right"></i>Edit diary
                 </a>
                 <button type="button"

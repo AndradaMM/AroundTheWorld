@@ -70,7 +70,8 @@ namespace AroundTheWorld.Web.Controllers
         public IActionResult EditDiary(int id)
         {
             var diary = _diaryRepository.GetById(id);
-            return View();
+            var editDiaryWithChapters = new EditDiaryWithChapters(diary);
+            return View(editDiaryWithChapters);
         }
 
         [HttpDelete]
