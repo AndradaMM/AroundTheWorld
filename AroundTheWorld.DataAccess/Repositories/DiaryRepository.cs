@@ -24,7 +24,7 @@ namespace AroundTheWorld.DataAccess.Repositories
 
         public Diary GetById(int id)
         {
-            var diary = _atwDbContext.Diaries.Find(id);
+            var diary = _atwDbContext.Diaries.Include(d => d.Chapters).FirstOrDefault(d => d.Id == id);
             return diary;
         }
 

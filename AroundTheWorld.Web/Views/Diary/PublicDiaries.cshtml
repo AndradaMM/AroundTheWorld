@@ -3,19 +3,26 @@
 <div class="public-diary-container">
     @foreach (var diary in Model)
     {
-    <div class="card card-public-diary">
-        <a asp-controller="Diary" asp-action="ViewPublicDiary">
-            <div class="card-public-diary-title">
-                @(diary.Name)
-            </div>
-            <div class="card-img-container">
-                <img class="card-img" src="@(diary.Image)" alt="public diary">
-            </div>
-            <div class="card-body card-body-public-diary ">
-                <p class="public-diary-location-date"><i class="fas fa-globe-americas"></i>@(diary.Location)</p>
-                <p class="public-diary-location-date"><i class="far fa-calendar-alt "></i>@(diary.Date.ToShortDateString())</p>
-            </div>
-        </a>
-    </div>
+        <div class="card card-public-diary">
+            <a asp-controller="Diary" asp-action="ViewPublicDiary" asp-route-id="@diary.Id">
+                <div class="card-public-diary-title">
+                    @(diary.Name)
+                </div>
+                <div class="card-img-container">
+                    @if (string.IsNullOrWhiteSpace(diary.Image))
+                    {
+                        <img class="card-img" src="~/images/noImage.png" alt="Card image cap">
+                    }
+                    else
+                    {
+                        <img class="card-img" src="@(diary.Image)" alt="Card image cap">
+                    }
+                </div>
+                <div class="card-body card-body-public-diary ">
+                    <p class="public-diary-location-date"><i class="fas fa-globe-americas"></i>@(diary.Location)</p>
+                    <p class="public-diary-location-date"><i class="far fa-calendar-alt "></i>@(diary.Date.ToShortDateString())</p>
+                </div>
+            </a>
+        </div>
     }
 </div>

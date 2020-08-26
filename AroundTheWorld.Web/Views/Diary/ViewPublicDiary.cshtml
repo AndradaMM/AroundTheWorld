@@ -1,74 +1,44 @@
 ﻿@model AroundTheWorld.Web.ViewModels.DiaryRelated.PublicDiaryWithChapters
 
-<div class="view-public-diary">
-    <div class="public-diary-chapters">
-        <div>
-            <h3>@(Model.DiaryName)</h3>
-        </div>
-        <div class="public-diary-chapters-list">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">List of public chapters</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var chapter in Model.Chapters)
-                    {
+    <div class="view-public-diary">
+        <div class="public-diary-chapters">
+            <div>
+                <h3>@(Model.DiaryName)</h3>
+            </div>
+            <div class="public-diary-chapters-list">
+                <table class="table table-striped">
+                    <thead>
                         <tr>
-                            <td>@chapter.Name</td>
+                            <th scope="col">List of public chapters</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach (var chapter in Model.Chapters)
+                        {
+                            <tr>
+                                <td class="public-chapter-item" data-chapter-id="@chapter.Id">@chapter.Name</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="public-diary-chapter">
+            @await Component.InvokeAsync(nameof(AroundTheWorld.Web.Views.Chapter.ViewPublicChapterComponent), new { chapterId = Model.Chapters.First().Id })
         </div>
     </div>
-    <div class="public-diary-chapter">
-        <div class="public-chapter-details">
-            <h4>Chapter name</h4>
-            <p class="public-chapter-detail"><i class="fas fa-globe-americas"></i>Location</p>
-            <p class="public-chapter-detail"><i class="far fa-calendar-alt "></i>26.01.2019</p>
-            <img class="card-img public-chapter-image" src="~/images/noImage.png" alt="Card image cap">
-        </div>
-        <div class="public-chapter-content">
-            <p>
-                start text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                texttext texttext texttext texttext text finish
-                start text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                texttext texttext texttext texttext text finish
-                start text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                texttext texttext texttext texttext text finish
-                start text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                texttext texttext texttext texttext text finish
-                start text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                texttext texttext texttext texttext text finish
-                start text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                texttext texttext texttext texttext text finish
-                start text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                texttext texttext texttext texttext text finish
-                start text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                texttext texttext texttext texttext text finish
-                start text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                text texttext texttext texttext texttext texttext texttext texttext
-                texttext texttext texttext texttext text finish
-            </p>
-        </div>
-    </div>
-</div>
+
+<script>
+    $(".public-chapter-item").click(function (event) {
+        var id = $(event.currentTarget).data("chapter-id");
+        $.ajax({
+            url: "@Url.Action("ViewPublicChapter", "Chapter")",
+            data: {
+                id
+            },
+            success: function (htmlContent) {
+                $(".public-diary-chapter").html(htmlContent);
+            }
+        })
+    })
+</script>

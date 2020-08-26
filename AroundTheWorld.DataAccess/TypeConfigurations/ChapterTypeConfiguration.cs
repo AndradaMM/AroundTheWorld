@@ -27,7 +27,7 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
                        Name = "Day 1",
                        Location = "London",
                        Date = new DateTime(2020, 7, 6),
-                       Content = "Chapter 1",
+                       Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                        CreatedOn = new DateTime(2020, 7, 7)
                    },
                    new Chapter
@@ -39,7 +39,7 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
                        Name = "Day 2",
                        Location = "London",
                        Date = new DateTime(2020, 7, 6),
-                       Content = "Chapter 2",
+                       Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                        CreatedOn = new DateTime(2020, 7, 7)
                    },
                    new Chapter
@@ -51,7 +51,7 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
                        Name = "Day 2",
                        Location = "London",
                        Date = new DateTime(2020, 7, 6),
-                       Content = "Chapter 2",
+                       Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                        CreatedOn = new DateTime(2020, 7, 7)
                    },
                    new Chapter
@@ -63,7 +63,7 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
                        Name = "Day 2",
                        Location = "London",
                        Date = new DateTime(2020, 7, 6),
-                       Content = "Chapter 2",
+                       Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                        CreatedOn = new DateTime(2020, 7, 7)
                    },
                    new Chapter
@@ -75,7 +75,7 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
                        Name = "Day 2",
                        Location = "London",
                        Date = new DateTime(2020, 7, 6),
-                       Content = "Chapter 2",
+                       Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                        CreatedOn = new DateTime(2020, 7, 7)
                    },
                    new Chapter
@@ -87,7 +87,7 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
                        Name = "Day 2",
                        Location = "London",
                        Date = new DateTime(2020, 7, 6),
-                       Content = "Chapter 2",
+                       Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                        CreatedOn = new DateTime(2020, 7, 7)
                    }
                );

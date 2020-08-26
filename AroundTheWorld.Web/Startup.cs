@@ -38,6 +38,7 @@ namespace AroundTheWorld.Web
 
             services.AddScoped<IAtwImageRepository, AtwImageRepository>();
             services.AddScoped<IDiaryRepository, DiaryRepository>();
+            services.AddScoped<IChapterRepository, ChapterRepository>();
 
             services.AddRazorPages();
         }

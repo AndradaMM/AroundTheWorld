@@ -32,12 +32,24 @@
                 <a asp-controller="Diary" asp-action="EditDiary" class="btn btn-dark card-btn card-edit-btn">
                     <i class="far fa-edit icon-margin-right"></i>Edit diary
                 </a>
-                <a href="#" class="btn btn-dark card-btn" data-toggle="modal" data-target="#DeleteDiary">
+                <button type="button"
+                        class="btn btn-dark card-btn delete-diary-btn" 
+                        data-diary-id="@(diary.Id)"
+                        data-toggle="modal" 
+                        data-target="#DeleteDiary">
                     <i class="fas fa-trash icon-margin-right"></i>Delete
-                </a>
+                </button>
             </div>
         </div>
     }
 </div>
 
+<input id="diary-to-delete-id" type="hidden" />
 <partial name="~/Views/Diary/DeleteDiary.cshtml" />
+
+<script>
+    $(".delete-diary-btn").click(function () {
+        var diaryToDeleteId = $(this).data("diary-id");
+        $("#diary-to-delete-id").val(diaryToDeleteId);
+    })
+</script>

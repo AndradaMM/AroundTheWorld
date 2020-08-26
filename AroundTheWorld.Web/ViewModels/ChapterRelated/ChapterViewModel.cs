@@ -13,7 +13,7 @@ namespace AroundTheWorld.Web.ViewModels.ChapterRelated
         public string Location { get; set; }
         public DateTime Date { get; set; }
         public string Content { get; set; }
-        public byte[] Image { get; set; }
+        public string Image { get; set; }
 
         public ChapterViewModel(Chapter chapter)
         {
@@ -22,7 +22,10 @@ namespace AroundTheWorld.Web.ViewModels.ChapterRelated
             Location = chapter.Location;
             Date = chapter.Date;
             Content = chapter.Content;
-            Image = chapter.Image.Content;
+            if (chapter.Image != null)
+            {
+                Image = "data:image/png;base64," + Convert.ToBase64String(chapter.Image.Content);
+            }
         }
 
         public ChapterViewModel()

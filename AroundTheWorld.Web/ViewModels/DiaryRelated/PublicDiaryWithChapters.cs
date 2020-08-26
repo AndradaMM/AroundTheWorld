@@ -1,4 +1,5 @@
-﻿using AroundTheWorld.Web.ViewModels.ChapterRelated;
+﻿using AroundTheWorld.BusinessLogic.Entities;
+using AroundTheWorld.Web.ViewModels.ChapterRelated;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,16 @@ namespace AroundTheWorld.Web.ViewModels.DiaryRelated
         public PublicDiaryWithChapters()
         {
             Chapters = new List<ChapterViewModel>();
+        }
+
+        public PublicDiaryWithChapters(Diary diary)
+        {
+            DiaryName = diary.Name;
+            Chapters = new List<ChapterViewModel>();
+            foreach (var chapter in diary.Chapters.Where(c => c.IsPublic))
+            {
+                Chapters.Add(new ChapterViewModel(chapter));
+            }
         }
     }
 }

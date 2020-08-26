@@ -12,9 +12,27 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-dark btn-close-popup" data-dismiss="modal">No</button>
-                <button type="button" class="btn btn-success">Yes</button>
+                <button type="button" 
+                        class="btn btn-dark btn-close-popup" 
+                        data-dismiss="modal">No</button>
+                <button id="delete-diary-btn" type="button" class="btn btn-success">Yes</button>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $("#delete-diary-btn").click(function () {
+        var diaryToDeleteId = $("#diary-to-delete-id").val();
+        $.ajax({
+            url: "@Url.Action("DeleteDiary", "Diary")",
+            data: {
+                id: diaryToDeleteId
+            },
+            method: 'DELETE',
+            success: function () {
+                window.location.replace("@Url.Action("Index", "Home")");
+            }
+        });
+    })
+</script>

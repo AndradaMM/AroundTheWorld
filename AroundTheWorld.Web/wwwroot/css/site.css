@@ -2,15 +2,14 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 
-main{
-    display:flex;
-    justify-content:center;
-    padding-top:40px;
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
 }
 
 a.navbar-brand {
-    
-    width:60px;
+    width: 60px;
     white-space: normal;
     text-align: center;
     word-break: break-all;
@@ -18,106 +17,102 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #000;
+    color: #000;
 }
 
-a:hover {
-    color: #707070;
-    text-decoration:none;
-}
+    a:hover {
+        color: #707070;
+        text-decoration: none;
+    }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
 
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 
 
 body {
-    
     background-image: url("../images/background.jpg");
 }
 
 
 /*----------------------------------------------New css code---------------------------------------------*/
 
-.logo{
+.logo {
     max-width: 100%;
     height: auto;
 }
 
 .navbar {
     background-color: #f8f9fa4f;
-    
 }
 
-.nav-link{
+.nav-link {
     font-weight: 700;
     color: #000000;
 }
 
-.nav-link:hover, 
-.nav-link:active
-{
-    color:#707070;
-}
+    .nav-link:hover,
+    .nav-link:active {
+        color: #707070;
+    }
 
-.cards-container{
-    display:flex;
-    align-items:flex-start;
-    justify-content:space-evenly;
-    width:800px;
-    flex-wrap:wrap;
-    
+.cards-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 800px;
+    flex-wrap: wrap;
 }
 
 
 .card-btn {
-    display:block;
+    display: block;
     width: 100px;
-    
 }
 
 
-.card-btn-large{
-    width:210px;
+.card-btn-large {
+    width: 210px;
 }
 
-.card-edit-btn{
-    width:120px;
-    margin-bottom:10px;
+.card-edit-btn {
+    width: 120px;
+    margin-bottom: 10px;
 }
 
 .card-img {
@@ -136,18 +131,18 @@ body {
     padding: 30px;
     background-color: #f8f9fa9e;
     border: 1px solid #6c757d63;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 
-.card-add-diary{
-    height:6rem;
+.card-add-diary {
+    height: 6rem;
 }
 
 .btn-add {
     display: flex;
     justify-content: center;
-    color:#000;
+    color: #000;
 }
 
 .icon-margin-right {
@@ -155,9 +150,7 @@ body {
 }
 
 .card-new-diary {
-    display: inline-block;
     width: 50rem;
-    height: 22rem;
     padding: 30px;
     background-color: #f8f9fa9e;
     border: 1px solid #6c757d63;
@@ -166,19 +159,17 @@ body {
 
 .form-new-diary {
     margin-top: 30px;
-    
 }
 
 
 .text-form-new-diary {
     font-style: italic;
-    margin-top: 20px;
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
 
-.datepicker-new-diary{
-    width:150px;
-    font-style:italic;
+.datepicker-new-diary {
+    width: 150px;
+    font-style: italic;
 }
 
 .datepicker-icon {
@@ -196,7 +187,7 @@ body {
 
 
 .public-diary-container {
-    width:69.15%;
+    width: 69.15%;
     margin: auto;
 }
 
@@ -210,7 +201,7 @@ body {
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 30px;
-    height:17rem;
+    height: 17rem;
 }
 
     .card-public-diary:hover {
@@ -219,14 +210,14 @@ body {
 
 
 
-    .card-body-public-diary {
-        background-color: #e6e0d600;
-        padding-bottom: 1px;
-        padding-left: 10px;
-        padding-right: 0;
-        padding-top: 5px;
-        margin-top: 5px;
-    }
+.card-body-public-diary {
+    background-color: #e6e0d600;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-right: 0;
+    padding-top: 5px;
+    margin-top: 5px;
+}
 
 .card-public-diary-title {
     font-weight: bold;
@@ -364,9 +355,10 @@ body {
     padding: 40px;
 }
 
-.card-list-of-chapters{
+.card-list-of-chapters {
     padding: 0;
 }
+
 .list-of-chapters {
     width: 15rem;
     height: 25rem;
@@ -390,37 +382,37 @@ body {
 }
 
 .card-chapter-buttons {
-    display:inline-flex;
-    margin-left:95px;
+    display: inline-flex;
+    margin-left: 95px;
 }
 
 .edit-chapter-button {
     width: 40px;
     margin: 0;
-    font-size:20px;
+    font-size: 20px;
     margin-left: 5px;
 }
 
-.edit-chapter-button:hover {
-    color: #3c3939c9;
-    cursor: pointer;
-}
+    .edit-chapter-button:hover {
+        color: #3c3939c9;
+        cursor: pointer;
+    }
 
 .delete-chapter-button {
-     width: 40px;
-     margin: 0;
-     font-size: 20px;
+    width: 40px;
+    margin: 0;
+    font-size: 20px;
 }
 
-.delete-chapter-button:hover {
-     color: #3c3939c9;
-     cursor: pointer;
-}
+    .delete-chapter-button:hover {
+        color: #3c3939c9;
+        cursor: pointer;
+    }
 
 .btn-add-chapter {
-    margin-bottom:auto;
-    margin-top:auto;
-    height:260px;
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 260px;
 }
 
 .card-edit-chapter {
@@ -430,12 +422,11 @@ body {
 
 
 edit-chapter-text {
-
 }
 
 textarea.form-control {
     width: 450px;
-    min-height:200px;
+    min-height: 200px;
     max-height: 200px;
 }
 
@@ -455,18 +446,17 @@ textarea.form-control {
 }
 
 .edit-chapter-location {
-
 }
 
 .date-label {
-    margin-bottom:0px;
+    margin-bottom: 0px;
 }
 
 .edit-chapter-date {
 }
 
 .edit-chapter-public-checkbox {
-    display:inline-block;
+    display: inline-block;
 }
 
 .edit-chapter-buttons {
@@ -482,16 +472,15 @@ textarea.form-control {
     margin-left: 23px;
 }
 
-.form-group-fields> label {
+.form-group-fields > label {
     margin-bottom: 0;
 }
 
 .form-group-fields {
-    margin-bottom:0px;
+    margin-bottom: 0px;
 }
 
 .home-page {
-    
 }
 
 .logo-home-page {
@@ -503,7 +492,7 @@ textarea.form-control {
     margin-top: 15px;
     height: 45px;
     width: 180px;
-    margin-left:137px;
+    margin-left: 137px;
     margin-bottom: 15px;
 }
 
@@ -512,8 +501,8 @@ textarea.form-control {
 }
 
 .motto-home-page {
-    font-weight:bold;
-    margin-top:10px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .card-login {
@@ -546,6 +535,10 @@ textarea.form-control {
     background-color: #f8f9fa9e;
 }
 
+.public-chapter-item {
+    cursor: pointer
+}
+
 .public-diary-chapter {
     display: flex;
     justify-content: space-between;
@@ -554,6 +547,7 @@ textarea.form-control {
     background-color: #f8f9fa9e;
     border: 1px solid #6c757d63;
 }
+
 .public-chapter-details {
     width: 35%;
 }
@@ -582,7 +576,6 @@ textarea.form-control {
     position: relative;
     margin-left: -5px;
     margin-bottom: 5px;
-    
 }
 
 .location-new-diary-icon {
@@ -597,10 +590,8 @@ textarea.form-control {
     padding: 30px;
     background-color: #f8f9fa9e;
     border: 1px solid #6c757d63;
-
 }
 
 .account-settings-menu .nav-pills .nav-item .nav-link.active {
     background-color: #343a40;
 }
-
