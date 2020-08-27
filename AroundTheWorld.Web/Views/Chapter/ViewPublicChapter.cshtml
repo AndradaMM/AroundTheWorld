@@ -6,11 +6,11 @@
     <p class="public-chapter-detail"><i class="far fa-calendar-alt "></i>@Model.Date.ToShortDateString()</p>
     @if (string.IsNullOrWhiteSpace(Model.Image))
     {
-        <img class="card-img" src="~/images/noImage.png" alt="Card image cap">
+        <img class="card-img public-chapter-image" src="~/images/noImage.png" alt="Card image cap">
     }
     else
     {
-        <img class="card-img" src="@(Model.Image)" alt="Card image cap">
+        <img class="card-img public-chapter-image" src="@(Model.Image)" alt="Card image cap">
     }
 </div>
 <div class="public-chapter-content">
