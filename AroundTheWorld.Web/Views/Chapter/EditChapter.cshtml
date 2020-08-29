@@ -5,30 +5,29 @@
         <div>
             <h5 class="card-title">Edit chapter</h5>
         </div>
-        <div class="edit-chapter-container">
+        <form class="edit-chapter-container" asp-action="SaveChapter" asp-controller="Chapter" enctype="multipart/form-data">
+            @Html.HiddenFor(m=>m.Id)
             <div class="form-group edit-chapter-text">
-                <textarea class="form-control"  asp-for="Content">
-
-            </textarea>
-                <input type="file" id="upload-image"  asp-for="Image" />
+                <textarea class="form-control" asp-for="Content"></textarea>
+                <input type="file" id="upload-image" asp-for="Image" />
             </div>
             <div class="edit-chapter-fields">
                 <div class="edit-chapter-title form-group-fields">
                     <label for="title"><strong>Title</strong></label>
-                    <input class="form-control" id="title"  asp-for="Title"/>
+                    <input class="form-control" id="title" asp-for="Title" />
                 </div>
                 <div class="edit-chapter-location form-group-fields">
                     <label for="location"><strong>Location</strong></label>
-                    <input class="form-control" id="location"  asp-for="Location" />
+                    <input class="form-control" id="location" asp-for="Location" />
                 </div>
 
                 <div class="edit-chapter-date">
                     <p class="date-label"><b>Date</b></p>
                     <label for="start-date" class="datepicker-icon"><i class="far fa-calendar-alt "></i></label>
-                    <input id="start-date" data-provide="datepicker" class="form-control datepicker-new-diary"  asp-for="Date">
+                    <input id="start-date" data-provide="datepicker" class="form-control datepicker-new-diary" asp-for="Date">
                 </div>
                 <div class="edit-chapter-public-checkbox form-group-fields">
-                    <input type="checkbox" id="is-chapter-public"  asp-for="IsPublic" />
+                    <input type="checkbox" id="is-chapter-public" asp-for="IsPublic" />
                     <label for="is-chapter-public">Make chapter public</label>
                 </div>
                 <div class="edit-chapter-buttons">
@@ -39,11 +38,11 @@
                         </button>
                     </div>
                     <div class="edit-chapter-save-button">
-                        <button type="button" class="btn btn-success"><i class="far fa-save icon-margin-right"></i>Save</button>
+                        <button class="btn btn-success"><i class="far fa-save icon-margin-right"></i>Save</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
 
     </div>
 </div>

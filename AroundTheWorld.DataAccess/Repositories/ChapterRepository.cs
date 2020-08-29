@@ -25,7 +25,7 @@ namespace AroundTheWorld.DataAccess.Repositories
 
         public Chapter GetById(int id)
         {
-            var chapter = _atwDbContext.Chapters.Find(id);
+            var chapter = _atwDbContext.Chapters.Include(c => c.Image).FirstOrDefault(c => c.Id == id);
             return chapter;
         }
 

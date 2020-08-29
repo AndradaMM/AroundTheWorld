@@ -14,7 +14,6 @@ namespace AroundTheWorld.DataAccess.TypeConfigurations
         {
             builder.ToTable("tblAtwImage");
             builder.HasKey(atwImage => atwImage.Id);
-            builder.Property(atwImage => atwImage.Id).ValueGeneratedNever();
 
             var projectPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 

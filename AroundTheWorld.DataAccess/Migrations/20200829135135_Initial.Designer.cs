@@ -10,21 +10,23 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AroundTheWorld.DataAccess.Migrations
 {
     [DbContext(typeof(AtwDbContext))]
-    [Migration("20200823173246_Initial")]
+    [Migration("20200829135135_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.2")
+                .HasAnnotation("ProductVersion", "3.1.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("AroundTheWorld.BusinessLogic.Entities.AtwImage", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<byte[]>("Content")
                         .HasColumnType("varbinary(max)");
@@ -154,7 +156,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Content = "Chapter 1",
+                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             CreatedOn = new DateTime(2020, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Date = new DateTime(2020, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiaryId = 1,
@@ -166,7 +168,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            Content = "Chapter 2",
+                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             CreatedOn = new DateTime(2020, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Date = new DateTime(2020, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiaryId = 1,
@@ -178,7 +180,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            Content = "Chapter 2",
+                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             CreatedOn = new DateTime(2020, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Date = new DateTime(2020, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiaryId = 2,
@@ -190,7 +192,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                         new
                         {
                             Id = 4,
-                            Content = "Chapter 2",
+                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             CreatedOn = new DateTime(2020, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Date = new DateTime(2020, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiaryId = 3,
@@ -202,7 +204,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                         new
                         {
                             Id = 5,
-                            Content = "Chapter 2",
+                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             CreatedOn = new DateTime(2020, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Date = new DateTime(2020, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiaryId = 3,
@@ -214,7 +216,7 @@ namespace AroundTheWorld.DataAccess.Migrations
                         new
                         {
                             Id = 6,
-                            Content = "Chapter 2",
+                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             CreatedOn = new DateTime(2020, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Date = new DateTime(2020, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DiaryId = 4,
