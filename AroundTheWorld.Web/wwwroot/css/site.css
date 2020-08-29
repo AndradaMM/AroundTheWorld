@@ -247,76 +247,23 @@ body {
 }
 
 
-/*.card-account-settings {
-    width: 30rem;
-    height: 15rem;
-    
-}
-
-.card-account-settings-text{
-    margin-left:25px;
-}
-
-
-.body-account-settings {
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
-}
-
-
-.btn-account-settings-edit {
-    width: 200px;
-    height: 40px;
-    margin-bottom: 5px;
-    margin-top: 20px;
-    
-}
-
-.btn-account-settings-password {
-    width: 200px;
-    margin-bottom: 5px;
-    height: 40px;
-}
-
-.btn-account-settings-delete {
-    width: 180px;
-    margin-bottom: 5px;
-    height: 40px;
-}*/
-
-/*.btn-success {
-    color: #fff;
-    background-color: #025a24;
-    border-color: #025a24;
-}
-
-.modal-content {
-    background-color: #ffffffbf;
-}
-
-
-.card-change-password {
-    width: 40rem;
-    height: 20rem;
-}
-
-.btn-save-new-password {
-    margin-left: 2px;
-}
-
 .delete-pop-up {
     padding-top: 5px;
     padding-left: 15px;
     padding-bottom: 5px;
     padding-right: 5px;
-}*/
-
-.edit-diary-information {
-    width: 65rem;
-    margin-top: 0px;
-    margin-left: 2.5rem;
 }
+
+.delete-pop-up > p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+    .edit-diary-information {
+        width: 65rem;
+        margin-top: 0px;
+        margin-left: 2.5rem;
+    }
 
 .body-edit-diary-information {
     margin-top: 0;
@@ -369,8 +316,9 @@ body {
 .edit-diary-chapters {
     display: flex;
     justify-content: space-between;
-    width: 40.5rem;
+    width: 100%;
     margin-right: 80px;
+    flex-wrap: wrap;
 }
 
 .chapter {

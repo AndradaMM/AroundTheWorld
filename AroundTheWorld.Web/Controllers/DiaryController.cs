@@ -74,6 +74,10 @@ namespace AroundTheWorld.Web.Controllers
         public IActionResult EditDiary(int id)
         {
             var diary = _diaryRepository.GetById(id);
+            foreach (var chapter in diary.Chapters)
+            {
+                chapter.Content = chapter.Content.Substring(0, 70) + "...";
+            }
             var editDiaryWithChapters = new EditDiaryWithChapters(diary);
             return View(editDiaryWithChapters);
         }
