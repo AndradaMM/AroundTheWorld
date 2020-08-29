@@ -22,8 +22,12 @@ namespace AroundTheWorld.Web.Controllers
             return View();
         }
 
-        public IActionResult DeleteChapter()
+        [HttpDelete]
+        public IActionResult DeleteChapter(int id)
         {
+            var chapter = _chapterRepository.GetById(id);
+            _chapterRepository.Remove(chapter);
+            _chapterRepository.SaveChanges();
             return View();
         }
 

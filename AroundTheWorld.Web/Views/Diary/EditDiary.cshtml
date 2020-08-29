@@ -43,11 +43,12 @@
                             </div>
                             <div class="chapter-location-date">
                                 <p class="public-diary-location-date"><i class="fas fa-globe-americas"></i>@chapter.Location</p>
-                                <p class="public-diary-location-date"><i class="far fa-calendar-alt "></i>@chapter.Date</p>
+                                <p class="public-diary-location-date"><i class="far fa-calendar-alt "></i>@chapter.Date.ToShortDateString()</p>
                             </div>
 
                             <div class="card-chapter-buttons">
                                 <div class="delete-chapter-button"
+                                     data-chapter-id="@chapter.Id"
                                      data-toggle="modal"
                                      data-target="#deleteChapter">
                                     <a><i class="fas fa-trash icon-margin-right"></i></a>
@@ -68,4 +69,12 @@
     </form>
 </div>
 
+<input id="chapter-to-delete-id" type="hidden" />
 <partial name="~/Views/Chapter/DeleteChapter.cshtml" />
+
+<script>
+    $(".delete-chapter-button").click(function () {
+        var chapterToDeleteId = $(this).data("chapter-id");
+        $("#chapter-to-delete-id").val(chapterToDeleteId);
+    })
+</script>

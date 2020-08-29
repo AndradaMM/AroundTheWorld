@@ -13,8 +13,24 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark btn-close-popup" data-dismiss="modal">No</button>
-                <a type="button" class="btn btn-success" asp-controller="Diary" asp-action="DeleteDiary">Yes</a>
+                <button id="delete-chapter-button" type="button" class="btn btn-success">Yes</button>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $("#delete-chapter-button").click(function () {
+        var chapterToDeleteId = $("#chapter-to-delete-id").val();
+        $.ajax({
+            url: "@Url.Action("DeleteChapter", "Chapter")",
+            data: {
+                id: chapterToDeleteId
+            },
+            method: 'DELETE',
+            success: function () {
+                window.location.replace("@Url.Action("EditDiary", "Diary")");
+            }
+        });
+    })
+</script>

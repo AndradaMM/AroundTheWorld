@@ -315,7 +315,7 @@ body {
 
 .edit-diary-chapters {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     margin-right: 80px;
     flex-wrap: wrap;
