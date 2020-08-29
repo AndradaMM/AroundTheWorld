@@ -539,6 +539,10 @@ textarea.form-control {
     cursor: pointer
 }
 
+.edit-chapter-item {
+    cursor: pointer
+}
+
 .public-diary-chapter {
     display: flex;
     justify-content: space-between;

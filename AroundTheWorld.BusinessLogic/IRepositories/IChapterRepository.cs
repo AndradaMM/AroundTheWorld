@@ -11,6 +11,6 @@ namespace AroundTheWorld.BusinessLogic.IRepositories
         public void Add(Chapter chapter);
         public void Remove(Chapter chapter);
         public void SaveChanges();
-
+        IEnumerable<Chapter> GetAllByDiaryId(int diaryId);
     }
 }

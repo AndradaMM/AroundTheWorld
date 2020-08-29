@@ -28,5 +28,10 @@ namespace AroundTheWorld.Web.ViewModels.DiaryRelated
                 Chapters.Add(new ChapterViewModel(chapter));
             }
         }
+
+        public EditDiaryWithChapters()
+        {
+
+        }
     }
 }

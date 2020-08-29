@@ -1,0 +1,64 @@
+﻿@model AroundTheWorld.Web.ViewModels.DiaryRelated.EditDiaryFields
+<div class="card edit-diary-information" id="edit-diary-form">
+    <h4>Edit diary information</h4>
+    @Html.HiddenFor(m => m.Id)
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-new-diary body-edit-diary-information">
+        <input type="text" class="form-control text-form-new-diary edit-diary-diary-name"
+               asp-for="Name">
+        <div class="location-new-diary edit-diary-diary-location">
+            <label for="location"><i class="fas fa-globe-americas location-new-diary-icon"></i></label>
+            <input id="location" class="form-control" asp-for="Location" />
+        </div>
+        <div class="edit-diary-diary-date">
+            <label for="start-date" class="datepicker-icon"><i class="far fa-calendar-alt "></i></label>
+            <input id="start-date" data-provide="datepicker" class="form-control datepicker-new-diary"
+                   asp-for="Date">
+        </div>
+        <input type="file" id="edit-diary-upload-image" asp-for="Image" />
+    </div>
+    <button class="btn btn-save-new-diary btn-success edit-diary-information-button">
+        <i class="far fa-save icon-margin-right"></i>Save
+    </button>
+</div>
+
+<script>
+    //window.file = '';
+
+    //$("#image").change(function (event) {
+    //    var $input = $(event.currentTarget);
+    //})
+
+    //$("#edit-diary-form").submit(function (event) {
+    //    event.preventDefault();
+    //    event.stopPropagation();
+
+    //    var formData = new FormData();
+
+    //    var jsonData = JSON.parse($(event.currentTarget).serialize());
+    //    var objectKeys = Object.keys(jsonData);
+    //    objectKeys.forEach(function (key) {
+    //        formData.append(key, jsonData[key])
+    //    })
+    //    debugger;
+    //    //formData.append("ImagE$("#image").val())
+
+    //    $.ajax({
+    //        url: $("#edit-diary-form").attr("action"),
+    //        data: ,
+    //        method: 'POST',
+    //        success: function (data) {
+    //            try {
+    //                var parsedData = $.parseJSON(data);
+    //                if (parsedData?.isSuccess) {
+    //                    window.location.reload()
+    //                };
+    //            }
+    //            catch {
+    //                debugger;
+    //                $("#edit-diary-form-container").html(data);
+    //            }
+    //        }
+    //    })
+    //})
+</script>

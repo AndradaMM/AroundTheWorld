@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using AroundTheWorld.BusinessLogic.Entities;
 using AroundTheWorld.BusinessLogic.IRepositories;
@@ -13,10 +15,12 @@ namespace AroundTheWorld.Web.Controllers
     public class DiaryController : Controller
     {
         private readonly IDiaryRepository _diaryRepository;
+        private readonly IChapterRepository _chapterRepository;
 
-        public DiaryController(IDiaryRepository diaryRepository)
+        public DiaryController(IDiaryRepository diaryRepository, IChapterRepository chapterRepository)
         {
             _diaryRepository = diaryRepository;
+            _chapterRepository = chapterRepository;
         }
 
         public IActionResult StartANewDiary()
@@ -74,6 +78,53 @@ namespace AroundTheWorld.Web.Controllers
             return View(editDiaryWithChapters);
         }
 
+        [HttpPost]
+        public IActionResult SaveDiary(EditDiaryWithChapters model)
+        {
+            if (!DateTime.TryParse(model.DiaryFields.Date, out var date))
+            {
+                ModelState.AddModelError("Date", "Date is invalid");
+            }
+            if (!ModelState.IsValid)
+            {
+                model.Chapters = new List<ChapterViewModel>();
+                var chapters = _chapterRepository.GetAllByDiaryId(model.DiaryFields.Id);
+
+                foreach (var chapter in chapters)
+                {
+                    model.Chapters.Add(new ChapterViewModel(chapter));
+                }
+
+                return View("~/Views/Diary/EditDiary.cshtml", model);
+            }
+            var diary = _diaryRepository.GetById(model.DiaryFields.Id);
+
+            diary.Name = model.DiaryFields.Name;
+            diary.Location = model.DiaryFields.Location;
+            diary.Date = date;
+            if (model.DiaryFields.Image != null)
+            {
+                using var stream = model.DiaryFields.Image.OpenReadStream();
+                var imageBytes = new byte[stream.Length];
+                stream.Read(imageBytes);
+                if (diary.Image != null)
+                {
+                    diary.Image.Content = imageBytes;
+                }
+                else
+                {
+                    diary.Image = new AtwImage()
+                    {
+                        Content = imageBytes
+                    };
+                }
+            }
+
+            _diaryRepository.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
+        }
+
         [HttpDelete]
         public IActionResult DeleteDiary(int id)
         {
@@ -88,7 +139,7 @@ namespace AroundTheWorld.Web.Controllers
             var diary = _diaryRepository.GetById(id);
 
             var model = new PublicDiaryWithChapters(diary);
-            
+
             return View(model);
         }
     }

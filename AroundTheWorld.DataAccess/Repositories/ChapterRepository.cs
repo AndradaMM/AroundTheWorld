@@ -1,8 +1,10 @@
 ﻿using AroundTheWorld.BusinessLogic.Entities;
 using AroundTheWorld.BusinessLogic.IRepositories;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 
 namespace AroundTheWorld.DataAccess.Repositories
@@ -25,6 +27,11 @@ namespace AroundTheWorld.DataAccess.Repositories
         {
             var chapter = _atwDbContext.Chapters.Find(id);
             return chapter;
+        }
+
+        public IEnumerable<Chapter> GetAllByDiaryId(int diaryId)
+        {
+            return _atwDbContext.Chapters.Include(c => c.Image).Where(c => c.DiaryId == diaryId);
         }
 
         public void Remove(Chapter chapter)
