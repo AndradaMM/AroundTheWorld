@@ -327,6 +327,7 @@ body {
 
 .notes-from-diary {
     padding: 10px 20px 0px 20px;
+    height: 82px;
 }
 
 .notes-from-diary > p {
@@ -365,6 +366,10 @@ body {
     margin-bottom: auto;
     margin-top: auto;
     height: 260px;
+}
+
+.btn-add-chapter > a:focus {
+    box-shadow: none;
 }
 
 .card-edit-chapter {

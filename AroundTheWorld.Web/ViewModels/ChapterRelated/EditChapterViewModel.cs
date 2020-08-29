@@ -9,7 +9,8 @@ namespace AroundTheWorld.Web.ViewModels.ChapterRelated
 {
     public class EditChapterViewModel
     {
-        public int Id { get; set; }
+        public Nullable<int> Id { get; set; }
+        public int DiaryId { get; set; }
         [Required]
         public string Content { get; set; }
         [Required]

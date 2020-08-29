@@ -11,7 +11,7 @@
                             <h5 class="card-title">New chapter</h5>
                         </div>
                         <div class="btn-add btn-add-chapter">
-                            <a asp-controller="Chapter" asp-action="EditChapter" class="btn btn-default">
+                            <a asp-controller="Chapter" asp-action="EditChapter" asp-route-diaryId="@Model.DiaryFields.Id" class="btn btn-default">
                                 <i class="fas fa-plus fa-5x"></i>
                             </a>
                         </div>

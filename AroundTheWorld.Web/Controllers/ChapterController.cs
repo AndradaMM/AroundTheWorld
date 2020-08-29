@@ -18,19 +18,29 @@ namespace AroundTheWorld.Web.Controllers
             _chapterRepository = chapterRepository;
         }
 
-        public IActionResult EditChapter(int id)
+        public IActionResult EditChapter(Nullable<int> id, int diaryId)
         {
-            var chapter = _chapterRepository.GetById(id);
-            var viewModel = new EditChapterViewModel()
+            EditChapterViewModel viewModel;
+            if (id == null)
             {
-                Content = chapter.Content,
-                Title = chapter.Name,
-                Location = chapter.Location,
-                Date = chapter.Date.ToShortDateString(),
-                IsPublic = chapter.IsPublic,
-                Id = chapter.Id
+                viewModel = new EditChapterViewModel();
+                viewModel.DiaryId = diaryId;
+            }
+            else
+            {
+                var chapter = _chapterRepository.GetById(id.Value);
+                viewModel = new EditChapterViewModel()
+                {
+                    Content = chapter.Content,
+                    Title = chapter.Name,
+                    Location = chapter.Location,
+                    Date = chapter.Date.ToShortDateString(),
+                    IsPublic = chapter.IsPublic,
+                    Id = chapter.Id,
+                    DiaryId = diaryId
 
-            };
+                };
+            }
             return View(viewModel);
         }
 
@@ -45,7 +55,19 @@ namespace AroundTheWorld.Web.Controllers
             {
                 return View("EditChapter", viewModel);
             }
-            var chapter = _chapterRepository.GetById(viewModel.Id);
+
+            Chapter chapter;
+            if(viewModel.Id == null)
+            {
+                chapter = new Chapter();
+                chapter.DiaryId = viewModel.DiaryId;
+                _chapterRepository.Add(chapter);
+            }
+            else
+            {
+                chapter = _chapterRepository.GetById(viewModel.Id.Value);
+            }
+
             chapter.Name = viewModel.Title;
             chapter.Location = viewModel.Location;
             chapter.Date = date;

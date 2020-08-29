@@ -7,6 +7,7 @@
         </div>
         <form class="edit-chapter-container" asp-action="SaveChapter" asp-controller="Chapter" enctype="multipart/form-data">
             @Html.HiddenFor(m=>m.Id)
+            @Html.HiddenFor(m=>m.DiaryId)
             <div class="form-group edit-chapter-text">
                 <textarea class="form-control" asp-for="Content"></textarea>
                 <input type="file" id="upload-image" asp-for="Image" />
