@@ -329,6 +329,10 @@ body {
     padding: 10px 20px 0px 20px;
 }
 
+.notes-from-diary > p {
+    margin-bottom: 0.5rem;
+}
+
 .card-chapter-buttons {
     display: inline-flex;
     margin-left: 95px;

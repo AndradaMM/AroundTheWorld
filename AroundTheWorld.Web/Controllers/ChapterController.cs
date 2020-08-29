@@ -17,9 +17,20 @@ namespace AroundTheWorld.Web.Controllers
             _chapterRepository = chapterRepository;
         }
 
-        public IActionResult EditChapter()
+        public IActionResult EditChapter(int id)
         {
-            return View();
+            var chapter = _chapterRepository.GetById(id);
+            var viewModel = new EditChapterViewModel()
+            {
+                Content = chapter.Content,
+                Title = chapter.Name,
+                Location = chapter.Location,
+                Date = chapter.Date.ToShortDateString(),
+                IsPublic = chapter.IsPublic,
+                Id = chapter.Id
+
+            };
+            return View(viewModel);
         }
 
         [HttpDelete]
