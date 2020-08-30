@@ -321,6 +321,10 @@ body {
     flex-wrap: wrap;
 }
 
+.new-chapter {
+        height: 17rem;
+}
+
 .chapter {
     height: 25rem;
 }
@@ -365,7 +369,6 @@ body {
 .btn-add-chapter {
     margin-bottom: auto;
     margin-top: auto;
-    height: 260px;
 }
 
 .btn-add-chapter > a:focus {
@@ -374,7 +377,7 @@ body {
 
 .card-edit-chapter {
     width: 55rem;
-    height: 25rem;
+    height: auto;
 }
 
 
@@ -402,7 +405,9 @@ textarea.form-control {
 .edit-chapter-title {
 }
 
-.edit-chapter-location {
+.edit-chapter-location .dropdown-menu {
+    max-height: 8.5rem;
+    overflow: auto;
 }
 
 .date-label {

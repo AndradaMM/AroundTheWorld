@@ -8,25 +8,37 @@
         <form class="edit-chapter-container" asp-action="SaveChapter" asp-controller="Chapter" enctype="multipart/form-data">
             @Html.HiddenFor(m => m.Id)
             @Html.HiddenFor(m => m.DiaryId)
+
             <div class="form-group edit-chapter-text">
                 <textarea class="form-control" asp-for="Content"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
                 <input type="file" id="upload-image" asp-for="Image" />
+
             </div>
+            
+            
             <div class="edit-chapter-fields">
                 <div class="edit-chapter-title form-group-fields">
                     <label for="title"><strong>Title</strong></label>
-                    <input class="form-control" id="title" asp-for="Title" />
+                    <input class="form-control" id="title" asp-for="Title" autocomplete="off"/>
+                    <span asp-validation-for="Title" class="text-danger"></span>
                 </div>
+                
+
                 <div class="edit-chapter-location form-group-fields">
                     <label for="location"><strong>Location</strong></label>
-                    <input class="form-control" id="location" asp-for="Location" />
+                    <input class="form-control" id="location" asp-for="Location" autocomplete="off" />
+                    <span asp-validation-for="Location" class="text-danger"></span>
                 </div>
+                
 
                 <div class="edit-chapter-date">
                     <p class="date-label"><b>Date</b></p>
                     <label for="start-date" class="datepicker-icon"><i class="far fa-calendar-alt "></i></label>
-                    <input id="start-date" data-provide="datepicker" class="form-control datepicker-new-diary" asp-for="Date">
+                    <input id="start-date" data-provide="datepicker" class="form-control datepicker-new-diary" asp-for="Date" autocomplete="off">
+                    <span asp-validation-for="Date" class="text-danger"></span>
                 </div>
+                
                 <div class="edit-chapter-public-checkbox form-group-fields">
                     <input type="checkbox" id="is-chapter-public" asp-for="IsPublic" />
                     <label for="is-chapter-public">Make chapter public</label>
