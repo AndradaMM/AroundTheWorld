@@ -54,7 +54,7 @@ namespace AroundTheWorld.Web.Controllers
             _diaryRepository.Add(diary);
             _diaryRepository.SaveChanges();
 
-            return RedirectToAction("EditDiary");
+            return RedirectToAction("EditDiary", new { id = diary.Id});
         }
 
         public IActionResult PublicDiaries()
