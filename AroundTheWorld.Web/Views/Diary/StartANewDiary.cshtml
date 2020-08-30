@@ -15,13 +15,13 @@
             <span asp-validation-for="Location" class="text-danger"></span>
             <div class="location-new-diary">
                 <label for="location"><i class="fas fa-globe-americas location-new-diary-icon"></i></label>
-                <input id="location" class="form-control" placeholder="Enter the location" asp-for="Location" />
+                <input id="location" class="form-control" placeholder="Enter the location" asp-for="Location" autocomplete="off" />
             </div>
             <span asp-validation-for="Date" class="text-danger"></span>
             <div>
                 <label for="start-date" class="datepicker-icon"><i class="far fa-calendar-alt "></i></label>
                 <input id="start-date" data-provide="datepicker" class="form-control datepicker-new-diary"
-                       asp-for="Date" placeholder="Enter the date">
+                       asp-for="Date" placeholder="Enter the date" autocomplete="off">
             </div>
         </div>
         <button class="btn card-btn btn-save-new-diary btn-success">

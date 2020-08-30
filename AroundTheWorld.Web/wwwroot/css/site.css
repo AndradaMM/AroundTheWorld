@@ -346,10 +346,10 @@ body {
     margin-left: 5px;
 }
 
-    .edit-chapter-button:hover {
-        color: #3c3939c9;
-        cursor: pointer;
-    }
+.edit-chapter-button:hover {
+    color: #3c3939c9;
+    cursor: pointer;
+}
 
 .delete-chapter-button {
     width: 40px;
@@ -420,13 +420,9 @@ textarea.form-control {
     margin-top: 30px;
 }
 
-.edit-chapter-delete-button {
-    display: inline-block;
-}
 
 .edit-chapter-save-button {
     display: inline-block;
-    margin-left: 23px;
 }
 
 .form-group-fields > label {
@@ -542,8 +538,8 @@ width: 60rem;
     font-style: italic;
 }
 
-.dropdown-menu {
-    max-height: 15rem;
+.location-new-diary .dropdown-menu {
+    max-height: 8.5rem;
     overflow: auto;
 }
 
