@@ -3,7 +3,7 @@
     <form asp-action="SaveDiary" asp-controller="Diary" enctype="multipart/form-data">
         @Html.EditorFor(m => m.DiaryFields, "~/Views/Diary/EditorTemplates/EditDiaryFields.cshtml")
         <div class="edit-diary">
-            
+
             <div class="edit-diary-chapters">
                 <div class="card chapter">
                     <div class="card-body card-body-public-diary ">
@@ -77,4 +77,32 @@
         var chapterToDeleteId = $(this).data("chapter-id");
         $("#chapter-to-delete-id").val(chapterToDeleteId);
     })
+
+    $('#location').autoComplete({
+        bootstrapVersion: "4",
+        events: {
+            search: function (query, callback, $originalElement) {
+                $.ajax({
+                    url: 'https://public.opendatasoft.com/api/records/1.0/search/',
+                    type: 'GET',
+                    data: {
+                        dataset: 'worldcitiespop',
+                        q: query,
+                        facet: 'population',
+                        sort: 'population'
+                    },
+                    success: function (data) {
+                        var reducer = function (accumulator, currentValue) {
+                            if (accumulator.indexOf(currentValue) < 0) {
+                                accumulator.push(currentValue);
+                            }
+                            return accumulator;
+                        }
+                        var cities = data.records.map(r => r.fields.accentcity).reduce(reducer, []);
+                        callback(cities);
+                    }
+                })
+            }
+        }
+    });
 </script>

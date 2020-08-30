@@ -29,3 +29,33 @@
         </button>
     </form>
 </div>
+
+<script>
+    $('#location').autoComplete({
+        bootstrapVersion: "4",
+        events: {
+            search: function (query, callback, $originalElement) {
+                $.ajax({
+                    url: 'https://public.opendatasoft.com/api/records/1.0/search/',
+                    type: 'GET',
+                    data: {
+                        dataset: 'worldcitiespop',
+                        q: query,
+                        facet: 'population',
+                        sort: 'population'
+                    },
+                    success: function (data) {
+                        var reducer = function (accumulator, currentValue) {
+                            if (accumulator.indexOf(currentValue) < 0) {
+                                accumulator.push(currentValue);
+                            }
+                            return accumulator;
+                        }
+                        var cities = data.records.map(r => r.fields.accentcity).reduce(reducer, []);
+                        callback(cities);
+                    }
+                })
+            }
+        }
+    });
+</script>

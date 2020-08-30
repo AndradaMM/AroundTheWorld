@@ -418,8 +418,6 @@ textarea.form-control {
 
 .edit-chapter-buttons {
     margin-top: 30px;
-    display:flex;
-    justify-content:flex-start;
 }
 
 .edit-chapter-delete-button {
@@ -428,6 +426,7 @@ textarea.form-control {
 
 .edit-chapter-save-button {
     display: inline-block;
+    margin-left: 23px;
 }
 
 .form-group-fields > label {
@@ -541,6 +540,11 @@ width: 60rem;
     width: 15rem;
     display: inline-block;
     font-style: italic;
+}
+
+.dropdown-menu {
+    max-height: 15rem;
+    overflow: auto;
 }
 
 .location-new-diary {
