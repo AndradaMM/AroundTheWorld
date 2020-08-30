@@ -15,6 +15,8 @@ using Microsoft.Extensions.Hosting;
 using AroundTheWorld.DataAccess;
 using AroundTheWorld.BusinessLogic.IRepositories;
 using AroundTheWorld.DataAccess.Repositories;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using AroundTheWorld.Web.Services;
 
 namespace AroundTheWorld.Web
 {
@@ -39,6 +41,8 @@ namespace AroundTheWorld.Web
             services.AddScoped<IAtwImageRepository, AtwImageRepository>();
             services.AddScoped<IDiaryRepository, DiaryRepository>();
             services.AddScoped<IChapterRepository, ChapterRepository>();
+
+            services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddRazorPages();
         }
@@ -72,6 +76,8 @@ namespace AroundTheWorld.Web
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            
         }
     }
 }

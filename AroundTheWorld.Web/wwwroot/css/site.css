@@ -473,10 +473,19 @@ textarea.form-control {
     padding: 2.5rem;
 }
 
+.forgot-password-confirmation {
+    text-align: center;
+    margin: 10rem;
+}
+
+.forgot-password-confirmation > p {
+    font-weight:bold;
+}
+
 .view-public-diary {
-    display: flex;
-    justify-content: space-between;
-    width: 60rem;
+display: flex;
+justify-content: space-between;
+width: 60rem;
 }
 
 .public-diary-chapters {
