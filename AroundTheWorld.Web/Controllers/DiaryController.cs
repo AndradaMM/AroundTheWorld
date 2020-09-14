@@ -76,9 +76,9 @@ namespace AroundTheWorld.Web.Controllers
             var diary = _diaryRepository.GetById(id);
             foreach (var chapter in diary.Chapters)
             {
-                if (chapter.Content.Length > 80)
+                if (chapter.Content.Length > 65)
                 {
-                    chapter.Content = chapter.Content.Substring(0, 80) + "...";
+                    chapter.Content = chapter.Content.Substring(0, 65) + "...";
                 }
             }
             var editDiaryWithChapters = new EditDiaryWithChapters(diary);

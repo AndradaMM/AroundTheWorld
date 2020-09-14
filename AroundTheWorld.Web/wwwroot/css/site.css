@@ -1,7 +1,4 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-
+﻿
 main {
     display: flex;
     justify-content: center;
@@ -15,15 +12,15 @@ a.navbar-brand {
     word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background */
+
 a {
     color: #000;
 }
 
-    a:hover {
-        color: #707070;
-        text-decoration: none;
-    }
+a:hover {
+    color: #707070;
+    text-decoration: none;
+}
 
 .btn-primary {
     color: #fff;
@@ -37,8 +34,7 @@ a {
     border-color: #1861ac;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+
 html {
     font-size: 14px;
 }
@@ -70,7 +66,7 @@ body {
 }
 
 
-/*----------------------------------------------New css code---------------------------------------------*/
+
 
 .logo {
     max-width: 100%;
@@ -86,10 +82,10 @@ body {
     color: #000000;
 }
 
-    .nav-link:hover,
-    .nav-link:active {
-        color: #707070;
-    }
+.nav-link:hover,
+.nav-link:active {
+    color: #707070;
+}
 
 .cards-container {
     display: flex;
@@ -326,7 +322,7 @@ body {
 }
 
 .chapter {
-    height: 25rem;
+    height: 26rem;
 }
 
 .notes-from-diary {
@@ -473,10 +469,14 @@ textarea.form-control {
     font-weight:bold;
 }
 
+.reset-password-container {
+    width: 300px;
+}
+
 .view-public-diary {
-display: flex;
-justify-content: space-between;
-width: 60rem;
+    display: flex;
+    justify-content: space-between;
+    width: 60rem;
 }
 
 .public-diary-chapters {
