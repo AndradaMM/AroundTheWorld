@@ -204,9 +204,9 @@ body {
     height: 17rem;
 }
 
-    .card-public-diary:hover {
-        background-color: #e8e9ea9e;
-    }
+.card-public-diary:hover {
+    background-color: #e8e9ea9e;
+}
 
 
 
@@ -259,11 +259,11 @@ body {
     margin-bottom: 1rem;
 }
 
-    .edit-diary-information {
-        width: 65rem;
-        margin-top: 0px;
-        margin-left: 2.5rem;
-    }
+.edit-diary-information {
+    width: 65rem;
+    margin-top: 0px;
+    margin-left: 2.5rem;
+}
 
 .body-edit-diary-information {
     margin-top: 0;
@@ -361,10 +361,10 @@ body {
     font-size: 20px;
 }
 
-    .delete-chapter-button:hover {
-        color: #3c3939c9;
-        cursor: pointer;
-    }
+.delete-chapter-button:hover {
+    color: #3c3939c9;
+    cursor: pointer;
+}
 
 .btn-add-chapter {
     margin-bottom: auto;
@@ -378,10 +378,6 @@ body {
 .card-edit-chapter {
     width: 55rem;
     height: auto;
-}
-
-
-edit-chapter-text {
 }
 
 textarea.form-control {
@@ -402,8 +398,6 @@ textarea.form-control {
     margin-left: 100px;
 }
 
-.edit-chapter-title {
-}
 
 .edit-chapter-location .dropdown-menu {
     max-height: 8.5rem;
@@ -414,8 +408,6 @@ textarea.form-control {
     margin-bottom: 0px;
 }
 
-.edit-chapter-date {
-}
 
 .edit-chapter-public-checkbox {
     display: inline-block;
@@ -438,8 +430,6 @@ textarea.form-control {
     margin-bottom: 0px;
 }
 
-.home-page {
-}
 
 .logo-home-page {
     width: 20rem;

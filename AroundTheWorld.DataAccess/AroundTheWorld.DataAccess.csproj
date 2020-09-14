@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AroundTheWorld.BusinessLogic\AroundTheWorld.BusinessLogic.csproj" />
-    <ProjectReference Include="..\AroundTheWorld.Common\AroundTheWorld.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>

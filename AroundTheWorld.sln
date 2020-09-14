@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AroundTheWorld.BusinessLogi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AroundTheWorld.DataAccess", "AroundTheWorld.DataAccess\AroundTheWorld.DataAccess.csproj", "{7DCE9C89-97EA-4F77-ACFD-FEE58C8D4938}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AroundTheWorld.Common", "AroundTheWorld.Common\AroundTheWorld.Common.csproj", "{6F9D9374-1688-497B-8744-DDD7DB3A4D31}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AroundTheWorld.Test", "AroundTheWorld.Test\AroundTheWorld.Test.csproj", "{8700B9F8-5943-4428-AA46-2E1FBA7029BA}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{7DCE9C89-97EA-4F77-ACFD-FEE58C8D4938}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DCE9C89-97EA-4F77-ACFD-FEE58C8D4938}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DCE9C89-97EA-4F77-ACFD-FEE58C8D4938}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F9D9374-1688-497B-8744-DDD7DB3A4D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F9D9374-1688-497B-8744-DDD7DB3A4D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F9D9374-1688-497B-8744-DDD7DB3A4D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F9D9374-1688-497B-8744-DDD7DB3A4D31}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8700B9F8-5943-4428-AA46-2E1FBA7029BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8700B9F8-5943-4428-AA46-2E1FBA7029BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8700B9F8-5943-4428-AA46-2E1FBA7029BA}.Release|Any CPU.ActiveCfg = Release|Any CPU

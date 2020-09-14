@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AroundTheWorld.BusinessLogic\AroundTheWorld.BusinessLogic.csproj" />
-    <ProjectReference Include="..\AroundTheWorld.Common\AroundTheWorld.Common.csproj" />
     <ProjectReference Include="..\AroundTheWorld.DataAccess\AroundTheWorld.DataAccess.csproj" />
     <ProjectReference Include="..\AroundTheWorld.Web\AroundTheWorld.Web.csproj" />
   </ItemGroup>
